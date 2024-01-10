@@ -1,0 +1,16 @@
+.image-gallery{
+    column-count: 3;
+    column-gap: 10px;
+}
+
+.image-gallery img{
+    max-width: 100%;
+    display: block;
+    padding: 5px 0px;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+.image-gallery img:hover{
+    transform: scale(1.01);
+}
