@@ -66,37 +66,37 @@ const ContactUs = () => {
 
               {/* <input type="text" required/> */}
 
-              <div className="grid w-full max-w-lg items-center gap-1.5">
+              <div className="grid w-full max-w-2xl items-center gap-1.5">
                 <label htmlFor="name" className='medium-18'>Name</label>
                 <Input type="text" id="name" placeholder="Name" className=" " name="from_name"/>
               </div>
 
-              <div className="grid w-full max-w-lg items-center gap-1.5">
+              <div className="grid w-full max-w-2xl items-center gap-1.5">
                 <label htmlFor="country" className='medium-18'>Country</label>
                 <Input type="text" id="country" placeholder="Country" className=" " name="country" />
               </div>
 
-              <div className="grid w-full max-w-lg items-center gap-1.5">
+              <div className="grid w-full max-w-2xl items-center gap-1.5">
                 <label htmlFor="email" className='medium-18'>Email</label>
                 <Input type="email" id="email" placeholder="Email" className=" " name="email" />
               </div>
 
-              <div className="grid w-full max-w-lg items-center gap-1.5">
+              <div className="grid w-full max-w-2xl items-center gap-1.5">
                 <label htmlFor="mobile" className='medium-18'>Mobile</label>
                 <Input type="text" id="mobile" placeholder="Mobile" className=" " name="mobile" />
               </div>
 
-              <div className="grid w-full max-w-lg items-center gap-1.5">
+              <div className="grid w-full max-w-2xl items-center gap-1.5">
                 <label htmlFor="arival" className='medium-18'>Arival Date</label>
                 <Input type="date" id="arival" placeholder="Arival Date" className=" py-2" name="arival" />
               </div>
 
-              <div className="grid w-full max-w-lg items-center gap-1.5">
+              <div className="grid w-full max-w-2xl items-center gap-1.5">
                 <label htmlFor="depature" className='medium-18'>Depature Date</label>
                 <Input type="date" id="depature" placeholder="Depature Date" className=" py-2" name="depature" />
               </div>
 
-              <div className="grid w-full max-w-lg items-center gap-1.5">
+              <div className="grid w-full max-w-2xl items-center gap-1.5">
                 <label htmlFor="msg" className='medium-18'>Message</label>
                 <Textarea type="msg" id="msg" placeholder="Your Message" className=" " name="message" />
               </div>
