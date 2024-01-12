@@ -11,6 +11,7 @@ export const IMAGE_GAL = [
     {src:'/makandawa rain forest.jpg', alt:'image15'},
     {src:'/floratour1.jpg', alt:'image16'},
     {src:'/birding tour2.jpg', alt:'image17'},
+    {src:'/165564216.jpg', alt:'image18'},
 ]
 
 export const IMAGE_GAL_PAGE = [
@@ -29,4 +30,5 @@ export const IMAGE_GAL_PAGE = [
     {src:'/makandawa rain forest.jpg', alt:'image15'},
     {src:'/floratour1.jpg', alt:'image16'},
     {src:'/birding tour2.jpg', alt:'image17'},
+    {src:'/165564216.jpg', alt:'image18'},
 ]

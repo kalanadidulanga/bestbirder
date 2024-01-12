@@ -150,9 +150,15 @@ const Home = () => {
                             <p className=" regular-16 md:regular-18 lg:regular-20 text-black/80">
                                 Best Birder is a group of wildlife researchers and bird experts in Sri Lanka with over 15 years of experience. We wish to give an ultimate wildlife and birding experience for anyone who loves to enjoy the unique and wondrous Wildlife in Sri Lanka.
                             </p>
-                            <Button asChild className=" w-[180px] py-7 bg-green-500 hover:bg-emerald-500 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300" size={"lg"}>
-                                <Link to="/contact_us" className="">Contact Now</Link>
-                            </Button>
+                            <div className=" flex gap-3 flex-col md:flex-row">
+                                <Button asChild className=" w-[180px] py-7 bg-green-500 hover:bg-emerald-500 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300" size={"lg"}>
+                                    <Link to="/about_us" className="">About us</Link>
+                                </Button>
+
+                                <Button asChild className=" w-[180px] py-7 bg-emerald-500 hover:bg-green-500 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300" size={"lg"}>
+                                    <Link to="/contact_us" className="">Contact Now</Link>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -68,6 +68,7 @@ const Policy = () => {
           </div>
         </div>
       </section>
+      
       <Footer />
     </>
   )
