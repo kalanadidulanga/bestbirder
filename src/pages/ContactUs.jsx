@@ -12,6 +12,8 @@ import { MdConnectWithoutContact } from "react-icons/md";
 import emailjs from '@emailjs/browser';
 
 import { useToast } from "@/components/ui/use-toast"
+import PageHeader from '@/components/PageHeader';
+import { SOCIALS } from '@/constants';
 
 const ContactUs = () => {
 
@@ -43,19 +45,7 @@ const ContactUs = () => {
 
       <Navbar />
 
-      <section className=' bg-banner1 bg-cover bg-bottom'>
-        <div className=' max-container padding-contaoner py-24 overflow-hidden'>
-          <div className=' flex flex-col items-center justify-center gap-4'>
-            <h2 className=' text-white text-6xl font-bold tracking-wide'>Contact Us</h2>
-            <div className=' flex items-center gap-3'>
-              <div className=' bg-green-500 rounded-full p-3 flex justify-center items-center'><FaHome color='white' size={20} /></div>
-              <Link to={'/'} className=' text-white regular-18 cursor-pointer hover:underline'>Home</Link>
-              <IoIosArrowForward color='white' size={25} />
-              <p className=' text-white regular-18'>Contact Us</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader name="Contact Us"/>
 
       <section className=' w-full h-auto overflow-hidden'>
         <div className=' bg-cover bg-center w-full'>
@@ -107,6 +97,35 @@ const ContactUs = () => {
 
               
             </form>
+          </div>
+        </div>
+      </section>
+
+      <section className=' w-full h-auto overflow-hidden bg-white'>
+        <div className=' max-container padding-container'>
+          <div className=' flex flex-col py-24'>
+            <h4 className=' bold-18 md:bold-20 lg:bold-32 mb-2 lg:mb-4 text-emerald-500'>Contacts</h4>
+            <p className=' max-w-4xl text-left bold-16 md:bold-18 lg:bold-20 tracking-wide'>Postal Address:</p>
+            <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide'>662/19, Muttettuwa Watta, Koongahagedara, Kuliyapiyiya, 60200, Sri Lanka</p>
+
+            <p className=' max-w-4xl text-left bold-16 md:bold-18 lg:bold-20 tracking-wide mt-5'>Email:</p>
+            <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide'>peabotuwage@outlook.com / peabotuwage@gmail.com</p>
+
+            <p className=' max-w-4xl text-left bold-16 md:bold-18 lg:bold-20 tracking-wide mt-5'>Hotline:</p>
+            <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide'>+94 716362389 / +94 772723796</p>
+
+            <ul className=' regular-14 flex gap-4 text-gray-30 mt-5'>
+              {SOCIALS.links.map((link) => (
+                <Link to={link.href} key={link.src} className=" hover:scale-125 duration-300">
+                  <img src={link.src} alt='logo' width={24} height={24} />
+                </Link>
+              ))}
+            </ul>
+
+            {/* <Button asChild className=" w-[180px] mt-10 py-7 bg-green-500 hover:bg-emerald-500 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300" size={"lg"}>
+              <Link to="/contact_us" className="">Contact Us</Link>
+            </Button> */}
+
           </div>
         </div>
       </section>

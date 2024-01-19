@@ -29,7 +29,7 @@ module.exports = {
         '5xl': '40px',
       },
       colors: {
-        mage: "1dabce",
+        darkgreen: "#385b00",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

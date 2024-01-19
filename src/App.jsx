@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import './app.css'
 import { AnimatePresence } from "framer-motion";
 import { Toaster } from "./components/ui/toaster";
+import BestLocations from "./pages/BestLocations";
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/policy" element={<Policy />} />
           <Route path="/contact_us" element={<ContactUs />} />
+          <Route path="/best_locations" element={<BestLocations/>} />
         </Routes>
 
         <Toaster/>

@@ -7,25 +7,15 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { MdEmojiPeople } from "react-icons/md";
 import { Button } from '@/components/ui/button';
+import PageHeader from '@/components/PageHeader';
+import { SOCIALS } from '@/constants';
 
 const AboutUs = () => {
   return (
     <>
       <Navbar />
 
-      <section className=' bg-banner1 bg-cover bg-bottom'>
-        <div className=' max-container padding-contaoner py-24 overflow-hidden'>
-          <div className=' flex flex-col items-center justify-center gap-4'>
-            <h2 className=' text-white text-6xl font-bold tracking-wide'>About Us</h2>
-            <div className=' flex items-center gap-3'>
-              <div className=' bg-green-500 rounded-full p-3 flex justify-center items-center'><FaHome color='white' size={20} /></div>
-              <Link to={'/'} className=' text-white regular-18 cursor-pointer hover:underline'>Home</Link>
-              <IoIosArrowForward color='white' size={25} />
-              <p className=' text-white regular-18'>About Us</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHeader name="About Us" />
 
       <section className=' w-full h-auto overflow-hidden'>
         <div className='bg-image5 bg-cover bg-bottom w-full'>
@@ -68,13 +58,13 @@ const AboutUs = () => {
                   has gained knowledge and experience with tropical bird flocks, migratory birds and the flora of
                   south and east Asia.
                 </p>
-                <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide ml-10 mt-3'>
+                {/* <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide ml-10 mt-3'>
                   Ferry Slik <br />
                   Professor &amp; Curator of the UBD Herbarium <br />
                   Faculty of Science, <br />
                   Universiti Brunei Darussalam, <br />
                   Jln Tungku Link, Gadong, BE1410, Brunei Darussalam. <br />
-                </p>
+                </p> */}
               </div>
 
             </div>
@@ -93,11 +83,20 @@ const AboutUs = () => {
             <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide'>peabotuwage@outlook.com / peabotuwage@gmail.com</p>
 
             <p className=' max-w-4xl text-left bold-16 md:bold-18 lg:bold-20 tracking-wide mt-5'>Hotline:</p>
-            <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide'>+94 716362389/ +94 772723796</p>
+            <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide'>+94 716362389 / +94 772723796</p>
+
+            <ul className=' regular-14 flex gap-4 text-gray-30 mt-5'>
+              {SOCIALS.links.map((link) => (
+                <Link to={link.href} key={link.src} className=" hover:scale-125 duration-300">
+                  <img src={link.src} alt='logo' width={24} height={24} />
+                </Link>
+              ))}
+            </ul>
 
             <Button asChild className=" w-[180px] mt-10 py-7 bg-green-500 hover:bg-emerald-500 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300" size={"lg"}>
               <Link to="/contact_us" className="">Contact Us</Link>
             </Button>
+
           </div>
         </div>
       </section>

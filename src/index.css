@@ -35,7 +35,7 @@ body {
 }
 
 .bg-banner4 {
-  background-image: url(/background/banner-4.jpg);
+  background-image: url(/new/15855827424_a54f5b5e9a_o.jpg);
 }
 
 .bg-image5 {
@@ -51,7 +51,7 @@ body {
 }
 
 .bg-banner1 {
-  background-image: url(/background/banner-image-1.jpg);
+  background-image: url(/new/photogal6.jpg);
 }
 
 
@@ -164,6 +164,10 @@ body {
 
   .bold-16 {
     @apply text-[16px] font-[700];
+  }
+
+  .bold-14 {
+    @apply text-[14px] font-[700];
   }
 
 }

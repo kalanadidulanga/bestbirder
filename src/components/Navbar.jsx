@@ -16,7 +16,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className=" bg-top">
+            <div className=" bg-[#385b00]">
                 <div className="  flex flex-col items-center gap-1 py-4 md:flex-row md:justify-between max-container padding-container">
                     <a href="#" className=" regular-14 text-white flex items-center gap-2"><HiOutlineMail size={18} />peabotuwage@outlook.com<span className=" md:inline-flex hidden">/ peabotuwage@gmail.com</span></a>
                     <a href="+94742764919" className=" regular-14 text-white flex items-center gap-2"><FaWhatsapp size={18} />+940716362389<span className="md:inline-flex hidden">/ +940772723796</span></a>
@@ -34,7 +34,7 @@ const Navbar = () => {
 
                         <ul className="hidden h-full gap-12 lg:flex">
                             {NAV_LINKS.map((link) => (
-                                <NavLink to={link.href} key={link.key} className=" uppercase tracking-wide  duration-300 font-semibold text-black/80 flexCenter cursor-pointer pb-1.5 transition-all hover:text-green-500">
+                                <NavLink to={link.href} key={link.key} className=" uppercase tracking-wide  duration-300 font-semibold  text-black/80 flexCenter cursor-pointer pb-1.5 transition-all hover:text-green-500">
                                     {link.label}
                                 </NavLink>
                             ))}
