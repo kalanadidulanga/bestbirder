@@ -31,4 +31,9 @@ export const IMAGE_GAL_PAGE = [
     {src:'/floratour1.jpg', alt:'image16'},
     {src:'/birding tour2.jpg', alt:'image17'},
     {src:'/165564216.jpg', alt:'image18'},
+    {src:'/gal/photogal6.jpg', alt:'image19'},
+    {src:'/gal/photogal9.jpg', alt:'image20'},
+    {src:'/gal/photogal20.jpg', alt:'image21'},
+    {src:'/gal/photogal21.jpg', alt:'image22'},
+    {src:'/gal/photogal23.jpg', alt:'image23'},
 ]

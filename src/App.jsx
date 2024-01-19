@@ -31,7 +31,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/policy" element={<Policy />} />
           <Route path="/contact_us" element={<ContactUs />} />
-          <Route path="/best_locations" element={<BestLocations/>} />
+          <Route path="/locations" element={<BestLocations/>} />
         </Routes>
 
         <Toaster/>

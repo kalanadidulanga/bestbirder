@@ -54,6 +54,10 @@ body {
   background-image: url(/new/photogal6.jpg);
 }
 
+.bg-tour{
+  background-image: url(/background/photogal9.jpg);
+}
+
 
 .text-shadow {
   text-shadow: '5px 5px 7px black';

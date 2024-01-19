@@ -6,7 +6,7 @@ export const NAV_LINKS = [
     { href: '/gallery', key: 'gallery ', label: 'Gallery' },
     { href: '/policy', key: 'policy ', label: 'Policy' },
     { href: '/contact_us', key: 'contact_us', label: 'Contact Us' },
-    { href: '/best_locations', key: 'best_locations', label: 'Best Locations' },
+    { href: '/locations', key: 'locations', label: 'Locations' },
 ];
 
 export const HOME_CAROUSEL = [
@@ -91,6 +91,7 @@ export const FOOTER_LINKS = [
             { href: '/gallery', key: 'gallery ', label: 'Gallery' },
             { href: '/policy', key: 'policy ', label: 'Policy' },
             { href: '/contact_us', key: 'contact_us', label: 'Contact Us' },
+            { href: '/locations', key: 'locations', label: 'Locations' },
         ],
     },
 ];
