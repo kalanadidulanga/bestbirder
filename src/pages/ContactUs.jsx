@@ -50,7 +50,7 @@ const ContactUs = () => {
       <section className=' w-full h-auto overflow-hidden'>
         <div className=' bg-cover bg-center w-full'>
           <div className=' max-container padding-container flexCenter flex-col w-full'>
-            <h1 className=' bold-40 lg:bold-52 mt-24 mb-10 flex gap-3 items-center'><span><MdConnectWithoutContact /></span>Get In Touch</h1>
+            <h1 className=' bold-32 lg:bold-52 mt-24 mb-10 flex gap-3 items-center'><span><MdConnectWithoutContact /></span>Get In Touch</h1>
 
             <form ref={form} onSubmit={sendEmail} className=' w-full flex flex-col items-center mb-24 gap-5'>
 

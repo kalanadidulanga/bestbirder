@@ -19,7 +19,7 @@ const Policy = () => {
       <section className=' w-full h-auto overflow-hidden'>
         <div className='bg-image5 bg-cover bg-bottom w-full'>
           <div className=' max-container padding-container flexCenter flex-col w-full'>
-            <h1 className=' bold-40 lg:bold-52 mt-24 mb-10 flex gap-3 items-center'><span><MdOutlinePolicy /></span>Our Policy</h1>
+            <h1 className=' bold-32 lg:bold-52 mt-24 mb-10 flex gap-3 items-center'><span><MdOutlinePolicy /></span>Our Policy</h1>
 
             <div className=' flex flex-col gap-7 md:gap-10 lg:gap-14 mb-24'>
               <p className=' max-w-4xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide'>

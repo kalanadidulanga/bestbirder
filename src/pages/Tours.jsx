@@ -19,14 +19,14 @@ const Tours = () => {
 
       <section className=' w-full h-auto overflow-hidden'>
         <div className='bg-tour bg-cover bg-center w-full'>
-          <div className=' bg-white/80'>
+          <div className=' bg-white/85'>
             <div className=' max-container padding-container flexCenter flex-col w-full'>
-              <h1 className=' bold-40 lg:bold-52 mt-24 mb-10 flex gap-3 items-center'><span><MdTravelExplore /></span>Wildlife Tours</h1>
+              <h1 className=' bold-32 lg:bold-52 mt-24 mb-10 flex gap-3 items-center'><span><MdTravelExplore /></span>Wildlife Tours</h1>
 
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 lg:gap-14 mb-24 pt-10'>
 
                 {TOURS.map((props, index) => (
-                  <Card key={index} className="backdrop-blur-sm bg-white/30  w-full">
+                  <Card key={index} className="backdrop-blur-md bg-white/30  w-full">
                     <CardHeader>
                       <CardTitle className="py-3">{props.title}</CardTitle>
                       <div className=' w-full h-64 flex justify-center items-center overflow-hidden rounded-xl'>
