@@ -181,7 +181,7 @@ const Home = () => {
                             About BestBirder
                         </h4>
                         <h2 className=" bold-32 md:bold-40 lg:bold-52">
-                            Sri Lanka Best Travel Agency
+                            Best birding site in Sri Lanka
                         </h2>
                         <p className=" regular-16 md:regular-18 lg:regular-20 text-black/80">
                             Best Birder is a group of wildlife researchers and bird experts in
