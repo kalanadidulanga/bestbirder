@@ -92,12 +92,12 @@ const Home = () => {
                             >
                                 BestBirder
                             </h1>
-                            <p
+                            {/* <p
                                 className=" text-white bold-14 md:bold-18 lg:bold-20 leading-loose pt-3 md:pt-4 lg:pt-5"
                                 style={{ textShadow: "0px 0px 10px white" }}
                             >
                                 best birder is a government registered company
-                            </p>
+                            </p> */}
                             {/* <p className=" text-white regular-14 md:regular-18 lg:regular-20 leading-loose pt-5" style={{ textShadow: '0px 0px 10px white' }}>
                                 Your gateway to Sri Lanka's avian wonders. 15+ years of expertise, crafting ultimate wildlife & birding adventures for nature lovers. <span>best birder is a government registered company</span>
                             </p> */}
@@ -255,14 +255,14 @@ const Home = () => {
             </section>
 
             <section className="w-full flexCenter overflow-hidden bg-banner4 bg-cover bg-top brightness-90">
-                <div className=" bg-black/30 w-full h-full">
+                <div className=" bg-black/20 w-full h-full">
                     <div className="max-container padding-container h-full py-24">
                         <div className=" flex flex-col gap-2 lg:gap-4">
                             <h1
                                 className="bold-32 lg:bold-40 mb-3 lg:mb-7 text-green-500"
                                 style={{ textShadow: "0px 0px 10px green" }}
                             >
-                                Sri Lanka (Ceylon)
+                                Sri Lanka
                             </h1>
 
                             <p
@@ -302,10 +302,6 @@ const Home = () => {
                                 Reptiles, Butterflies, Freshwater Fish and Tropical Flora with
                                 many endemics.
                             </p>
-
-                            {/* <p className=" regular-14 lg:regular-18 text-white tracking-wide leading-relaxed text-justify indent-8 lg:indent-20" style={{ textShadow: '0px 0px 5px black' }}>
-                                Among Sri Lanka's many captivating life forms, birds take center stage. Woven into the fabric of Sri Lankan art, music, and literature, they have captivated hearts for centuries. Western birding influences emerged in the 16th century, enriching the understanding of this feathered tapestry. With 522 recorded species from 89 families, Sri Lanka hosts 224 breeding populations, 34 of which are island-exclusive. Beyond birds, a wealth of amphibians, mammals, reptiles, butterflies, freshwater fish, and tropical flora, many endemic, await discovery.
-                            </p> */}
                         </div>
                     </div>
                 </div>

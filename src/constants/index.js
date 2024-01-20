@@ -37,6 +37,13 @@ export const HOME_CAROUSEL = [
         css: 'green',
         sub:
             'Travel with Sri Lanka',
+    },
+    {
+        title: 'BESTBIRDER',
+        src: '/homepage10.jpg',
+        css: 'green',
+        sub:
+            'Travel with Sri Lanka',
     }
 ];
 

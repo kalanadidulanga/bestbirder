@@ -45,6 +45,9 @@ const AboutUs = () => {
 
               <div>
                 <h4 className=' bold-18 md:bold-20 lg:bold-32 mb-2 lg:mb-4 text-emerald-500'>Tour Leader</h4>
+                <div className=' max-w-4xl rounded-xl flex items-center justify-center my-5'>
+                  <img src="/1655642162.jpg" alt="" className=' object-cover object-center rounded-xl hover:shadow-xl hover:brightness-90 transition-all duration-300'/>
+                </div>
                 <h5 className='bold-18 md:bold-20 lg:bold-32 mb-1 lg:mb-2'>Mr. Indika Peabotuwage</h5>
                 <p className=' max-w-4xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide'>
                   Mr. Indika Peabotuwage is the founder of the Best Birder tour group in Sri Lanka. And also, a

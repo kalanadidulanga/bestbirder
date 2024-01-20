@@ -36,4 +36,8 @@ export const IMAGE_GAL_PAGE = [
     {src:'/gal/photogal20.jpg', alt:'image21'},
     {src:'/gal/photogal21.jpg', alt:'image22'},
     {src:'/gal/photogal23.jpg', alt:'image23'},
+    {src:'/gal/15856001334_f653f059f4_o.jpg', alt:'image24'},
+    {src:'/gal/16452502906_a536a5bf3e_o.jpg', alt:'image25'},
+    {src:'/gal/16477573412_ea9e41cdd9_o (1).jpg', alt:'image26'},
+    {src:'/gal/16478493445_7d69bfabbc_o.jpg', alt:'image27'},
 ]
