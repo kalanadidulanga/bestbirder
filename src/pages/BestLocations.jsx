@@ -66,7 +66,7 @@ const BestLocations = () => {
                   hectares and ranges from 0-152m above sea level. Nearly 106
                   “Willus” and tanks are found spread throughout Wilpattu. The
                   annual rainfall is about 1000mm and the annual temperature is
-                  about 27.2<sup>0</sup> C (81.00F). It is rich of dry zone biodiversity in
+                  about 27.2<sup>0</sup> C (81.0<sup>0</sup>F). It is rich of dry zone biodiversity in
                   Sri Lanka.
                 </p>
               </div>
