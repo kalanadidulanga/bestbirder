@@ -116,10 +116,10 @@ export const FOOTER_CONTACT_INFO = {
 export const SOCIALS = {
     title: 'Social',
     links: [
-        { href: '/', src: '/facebook.svg', },
-        { href: '/', src: '/instagram.svg', },
-        { href: '/', src: '/twitter.svg', },
-        { href: '/', src: '/youtube.svg', },
+        { href: '', src: '/facebook.svg', },
+        { href: '', src: '/instagram.svg', },
+        { href: '', src: '/twitter.svg', },
+        { href: '', src: '/youtube.svg', },
     ],
 };
 
