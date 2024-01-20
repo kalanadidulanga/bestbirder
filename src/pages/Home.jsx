@@ -295,10 +295,7 @@ const Home = () => {
                                 integral part of the Sri Lankan culture as they have been
                                 featured in our art, music and literature. The influence of
                                 western birding and ornithology started to seep into Sri Lankan
-                                from the 16th century. There are 522 bird species were recorded
-                                belonging to 89 families in Sri Lanka. Among of them, 224
-                                species have breeding populations of which 34 are endemic to the
-                                island. And also, Sri Lanka is rich with Amphibians, Mammals,
+                                from the 16th century. And also, Sri Lanka is rich with Amphibians, Mammals,
                                 Reptiles, Butterflies, Freshwater Fish and Tropical Flora with
                                 many endemics.
                             </p>
