@@ -274,7 +274,7 @@ const Home = () => {
                                 total land area of 65610km2. The island contained four major
                                 climatic zones (Wet zone, Dry zone, Intermediate zone and
                                 Semi-arid zone). The southwestern region of Sri Lanka,
-                                encompassing 20000km2 is the only per humid region in the whole
+                                encompassing 20000km<sup>2</sup> is the only per humid region in the whole
                                 of South Asia. It referred to as a Wet zone of Sri Lanka and
                                 receives up to 3000mm of rainfall annually. Sri Lanka, along
                                 with the Western Ghats of India is designated as one of the
