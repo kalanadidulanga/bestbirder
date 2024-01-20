@@ -60,8 +60,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className=' border bg-gray-20 mb-2' />
-        <p className=' regular-14 w-full text-center text-gray-30'>© Copyright 2024 Developed By <span className=' font-bold'>Kalana Didulanga</span> | All Right Reserved.</p>
+        {/* <div className=' border bg-gray-20 mb-2' /> */}
+        <p className=' bold-16 w-full text-center text-gray-30'>best birder is a government registered company</p>
+
+        <div className=' border bg-gray-20 mt-5 mb-2' />
+        <p className=' regular-14 w-full text-center text-gray-30'>© Copyright 2024 Developed By (kalanadidulanga2005@gmail.com) <span className=' font-bold'>Kalana Didulanga</span> | All Right Reserved.</p>
       </div>
     </footer>
   )

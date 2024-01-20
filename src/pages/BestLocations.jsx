@@ -66,17 +66,17 @@ const BestLocations = () => {
                   hectares and ranges from 0-152m above sea level. Nearly 106
                   “Willus” and tanks are found spread throughout Wilpattu. The
                   annual rainfall is about 1000mm and the annual temperature is
-                  about 27.20C (81.00F). It is rich of dry zone biodiversity in
+                  about 27.2<sup>0</sup> C (81.00F). It is rich of dry zone biodiversity in
                   Sri Lanka.
                 </p>
               </div>
 
               <div className="mt-5">
                 <h4 className=" bold-18 md:bold-20 lg:bold-32 mb-2 lg:mb-4 text-emerald-500">
-                  Sigiriya Sanctuary (the 8th wonder of the world)
+                  Sigiriya Sanctuary (the 8<sup>th</sup> wonder of the world)
                 </h4>
                 <p className=" max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
-                  Sigiriya is the 8th Wonder of the world (UNESCO world heritage
+                  Sigiriya is the 8<sup>th</sup> Wonder of the world (UNESCO world heritage
                   site). This ancient rock fortress locates in the Matale
                   District of Central Province of Sri Lanka. This area has a
                   unique vegetation type including rock outcrops and dry
@@ -134,7 +134,7 @@ const BestLocations = () => {
                   ranging from an altitude of 300-1170m. It consists of 6092 ha
                   of forest reserve and 2772 ha of proposed forest reserve. The
                   mean annual rainfall is 2500-5000mm and the average annual
-                  temperature is nearly 24.60C.
+                  temperature is nearly 24.6<sup>0</sup>C.
                 </p>
               </div>
 
@@ -149,7 +149,7 @@ const BestLocations = () => {
                   forest, riverine vegetation, lagoons, tanks, grasslands and
                   scrublands. The mean annual rainfall is 1000-1500mm and is
                   limited to the northeast and inter monsoon periods. The
-                  average annual temperature approximately 290C. It’s home to
+                  average annual temperature approximately 29<sup>0</sup>C. It’s home to
                   wildlife such as leopards, elephants, sloth bear and
                   crocodiles, as well as many water bird species.
                 </p>
@@ -182,7 +182,7 @@ const BestLocations = () => {
                   birds during the migration season (August-April). It harbors
                   nearly 200 species of birds including Greater flamingo. Annual
                   rainfall is below 1000mm and the temperature is approximately
-                  310C. The National park was designated as a biosphere reserve
+                  31<sup>0</sup>C. The National park was designated as a biosphere reserve
                   by UNESCO in 2005.
                 </p>
               </div>
