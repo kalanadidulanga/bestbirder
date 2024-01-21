@@ -166,6 +166,27 @@ const Home = () => {
                 </div>
             </section>
 
+            <section className="w-full flexCenter overflow-hidden">
+                <div className=" bg-white w-full h-full">
+                    <div className="max-container padding-container h-full py-24">
+                        <div className=" flex flex-col gap-2 lg:gap-4">
+                            <h1
+                                className="bold-32 lg:bold-40 mb-3 lg:mb-7 text-green-500"
+                            >
+                                Bird Migration
+                            </h1>
+
+                            <p
+                                className=" regular-14 lg:regular-18 text-gray-500 tracking-wide leading-relaxed text-justify indent-8 lg:indent-20"
+                                
+                            >
+                                Migration is one of the most fascinating phenomena in nature, demonstrated by every major animal taxon, which maximizes survival and reproductive success through the utilization of key habitats, food sources and breeding grounds and the avoidance of adverse environmental conditions. Recent evidence is that every four billion migratory birds make short or long-distance migrations. Many species and large numbers of birds are annually moved to tropics along the East Asian flyway and the Central Asian flyway. Sri Lanka is one of the great destinations of migratory birds. There are three major migration routes to Sri Lanka.  Western route, Eastern route and Andaman route. They are moving along the Central Asian flyway to Sri Lanka and start their southward journey in mid-August and their departures begin in late march.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section className=" max-container padding-container">
                 {/* <div className=" w-full bg-white py-10 my-24 rounded-2xl  bg-newsletter bg-cover bg-center"> */}
                 <div className=" flex flex-col lg:flex-row p-5 my-24">
@@ -181,7 +202,7 @@ const Home = () => {
                             About BestBirder
                         </h4>
                         <h2 className=" bold-32 md:bold-40 lg:bold-52">
-                            Best birding site in Sri Lanka
+                            Best Travel Agency in Sri Lanka
                         </h2>
                         <p className=" regular-16 md:regular-18 lg:regular-20 text-black/80">
                             Best Birder is a group of wildlife researchers and bird experts in
@@ -224,7 +245,7 @@ const Home = () => {
                         <h2 className=" bold-32 md:bold-40 lg:bold-52 mb-10">
                             Image Gallery
                         </h2>
-                        <div className="image-gallery">
+                        <div className=" columns-3 lg:columns-4 image-gallery">
                             <LightGallery
                                 onInit={onInit}
                                 speed={500}

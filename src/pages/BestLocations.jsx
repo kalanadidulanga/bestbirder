@@ -73,7 +73,7 @@ const BestLocations = () => {
 
               <div className="mt-5">
                 <h4 className=" bold-18 md:bold-20 lg:bold-32 mb-2 lg:mb-4 text-emerald-500">
-                  Sigiriya Sanctuary (the 8<sup>th</sup> wonder of the world)
+                  Sigiriya Sanctuary
                 </h4>
                 <p className=" max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                   Sigiriya is the 8<sup>th</sup> Wonder of the world (UNESCO world heritage
@@ -119,7 +119,7 @@ const BestLocations = () => {
 
               <div className="mt-5">
                 <h4 className=" bold-18 md:bold-20 lg:bold-32 mb-2 lg:mb-4 text-emerald-500">
-                  Sinharaja Rain Forest (world heritage site)
+                  Sinharaja Rain Forest
                 </h4>
                 <p className=" max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                   Sinharaja man and biosphere lowland rainforest is located in
@@ -189,7 +189,7 @@ const BestLocations = () => {
 
               <div className="mt-5">
                 <h4 className=" bold-18 md:bold-20 lg:bold-32 mb-2 lg:mb-4 text-emerald-500">
-                  Vankalai Sanctuary (Ramsar wetland)
+                  Vankalai Sanctuary
                 </h4>
                 <p className=" max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                   Vankalai bird sanctuary (4839 hectares) is located in Mannar
