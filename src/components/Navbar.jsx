@@ -18,8 +18,9 @@ const Navbar = () => {
         <>
             <div className=" bg-[#385b00]">
                 <div className="  flex flex-col items-center gap-1 py-4 md:flex-row md:justify-between max-container padding-container">
-                    <a href="#" className=" regular-14 text-white flex items-center gap-2"><HiOutlineMail size={18} />peabotuwage@outlook.com<span className=" md:inline-flex hidden">/ peabotuwage@gmail.com</span></a>
-                    <a href="+94742764919" className=" regular-14 text-white flex items-center gap-2"><FaWhatsapp size={18} />+94716362389<span className="md:inline-flex hidden">/ +94772723796</span></a>
+                    <a href="#" className=" regular-14 text-white flex items-center gap-2">+94772723796<span className=" md:inline-flex hidden">/ peabotuwage@gmail.com</span></a>
+                    {/* <a href="+94742764919" className=" regular-14 text-white flex items-center gap-2"><FaWhatsapp size={18} />+94716362389<span className="md:inline-flex hidden">/ +94772723796</span></a> */}
+                    <div id='google_translate_element' className="translate bg-white rounded-xl p-2 w-auto "></div>
                 </div>
             </div>
 

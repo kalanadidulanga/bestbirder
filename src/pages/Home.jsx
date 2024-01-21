@@ -38,6 +38,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import GoogleTranslate from "@/components/GoogleTranslate";
 
 const Home = () => {
     const plugin = React.useRef(

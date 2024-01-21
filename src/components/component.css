@@ -1,3 +1,14 @@
 a.active {
     color: rgb(16 185 129);
 }
+
+.translate select{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.translate div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
