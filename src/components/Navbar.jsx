@@ -18,8 +18,8 @@ const Navbar = () => {
         <>
             <div className=" bg-[#385b00]">
                 <div className="  flex flex-col items-center gap-1 py-4 md:flex-row md:justify-between max-container padding-container">
-                    <a href="#" className=" regular-14 text-white flex items-center gap-2">+94772723796<span className=" md:inline-flex hidden">/ peabotuwage@gmail.com</span></a>
-                    {/* <a href="+94742764919" className=" regular-14 text-white flex items-center gap-2"><FaWhatsapp size={18} />+94716362389<span className="md:inline-flex hidden">/ +94772723796</span></a> */}
+                    <a href="#" className=" regular-14 text-white items-center gap-2 md:inline-flex hidden">+94772723796<span className=" ">/ peabotuwage@gmail.com</span></a>
+                    <a href="+94742764919" className=" regular-14 text-white flex items-center gap-2 md:hidden">peabotuwage@gmail.com<span className="">/ +94772723796</span></a>
                     <div id='google_translate_element' className="translate bg-white rounded-xl p-2 w-auto "></div>
                 </div>
             </div>
@@ -33,7 +33,7 @@ const Navbar = () => {
                             <img src="/bestbirder-logo.svg" width={130} height={100} alt="logo" />
                         </Link>
 
-                        <ul className="hidden h-full gap-12 lg:flex">
+                        <ul className="hidden h-full lg:gap-8 xl:gap-12 lg:flex">
                             {NAV_LINKS.map((link) => (
                                 <NavLink to={link.href} key={link.key} className=" uppercase tracking-wide  duration-300 font-semibold  text-black/80 flexCenter cursor-pointer pb-1.5 transition-all hover:text-green-500">
                                     {link.label}
