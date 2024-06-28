@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const PageHeader = ({ name }) => {
     return (
         <>
-            <section className=' bg-banner1 bg-cover bg-bottom'>
+            <section className=' bg-banner1 bg-cover bg-center'>
                 <div className=' bg-black/30'>
                     <div className=' max-container padding-contaoner py-24 overflow-hidden'>
                         <div className=' flex flex-col items-center justify-center gap-4'>

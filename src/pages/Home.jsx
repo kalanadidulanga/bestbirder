@@ -8,11 +8,12 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
-import { HOME_CAROUSEL, TOURS_HOME } from "@/constants";
+import { HOME_CAROUSEL, REVIEWS, TOURS_HOME } from "@/constants";
 import Autoplay from "embla-carousel-autoplay";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+import { FaStar } from "react-icons/fa";
 
 import LightGallery from "lightgallery/react";
 
@@ -38,7 +39,19 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
-import GoogleTranslate from "@/components/GoogleTranslate";
+
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import GoToTop from "@/components/GoToTop";
+
 
 const Home = () => {
     const plugin = React.useRef(
@@ -49,11 +62,19 @@ const Home = () => {
         console.log("lightGallery has been initialized");
     };
 
+    const [rating, setRating] = useState(null);
+    const [hover, setHover] = useState(null);
+
+    useEffect(() => {
+        console.log('test');
+    }, []);
+
     return (
         <>
-            <Navbar />
+            <GoToTop />
+            {/* <Navbar /> */}
 
-            <section className=" w-full lg:h-[40vw] md:h-[50vw] h-[60vw] flexCenter overflow-hidden  ">
+            <section className=" w-full lg:h-[40vw] md:h-[50vw] h-[60vw] flexCenter overflow-hidden">
                 <Carousel
                     plugins={[plugin.current]}
                     className="w-full h-full"
@@ -179,7 +200,7 @@ const Home = () => {
 
                             <p
                                 className=" regular-14 lg:regular-18 text-gray-500 tracking-wide leading-relaxed text-justify indent-8 lg:indent-20"
-                                
+
                             >
                                 Migration is one of the most fascinating phenomena in nature, demonstrated by every major animal taxon, which maximizes survival and reproductive success through the utilization of key habitats, food sources and breeding grounds and the avoidance of adverse environmental conditions. Recent evidence is that every four billion migratory birds make short or long-distance migrations. Many species and large numbers of birds are annually moved to tropics along the East Asian flyway and the Central Asian flyway. Sri Lanka is one of the great destinations of migratory birds. There are three major migration routes to Sri Lanka.  Western route, Eastern route and Andaman route. They are moving along the Central Asian flyway to Sri Lanka and start their southward journey in mid-August and their departures begin in late march.
                             </p>
@@ -235,6 +256,129 @@ const Home = () => {
                     </div>
                 </div>
                 {/* </div> */}
+            </section>
+
+
+            {/* review section  */}
+            <section className=" w-full overflow-hidden bg-white">
+                <div className=" max-container padding-container w-full py-24">
+                    <div className=' flex flex-col w-full h-auto'>
+
+                        <div className=" flex flex-col gap-3 w-full h-auto items-center pb-10">
+                            <h1 className=" text-5xl md:text-6xl font-bold text-center text-emerald-500">Our Reviews</h1>
+                            <p className=" text-sm text-gray-700 text-center">All of your reviews have a personal touch</p>
+                        </div>
+
+                        <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+
+                            {REVIEWS.map((review, index) => (
+                                <div className=' w-full flex flex-col gap-5' key={index}>
+                                    <div className=' flex justify-between w-full'>
+                                        <div className=' flex gap-2 w-full overflow-hidden items-center'>
+                                            <div className=' w-14 h-14 rounded-full overflow-hidden flex justify-center items-center'>
+                                                <Avatar>
+                                                    <AvatarImage src={review.img} />
+                                                    <AvatarFallback>{review.name.slice(0, 2)}</AvatarFallback>
+                                                </Avatar>
+
+                                            </div>
+
+                                            <div className=' flex flex-col items-start w-auto justify-center'>
+                                                <h5 className=' text-lg font-bold'>{review.name}</h5>
+                                                {/* <p className='text-sm font-normal'>{review.role}</p> */}
+                                            </div>
+                                        </div>
+                                        <div className='flex flex-row justify-center items-center w-[86px]'>
+                                            <StarRate rate={review.rate} />
+                                        </div>
+                                    </div>
+                                    <div className=" w-full overflow-hidden flex">
+                                        <p className=' text-sm'>
+                                            {review.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+
+                        </div>
+
+                        <div className=" flex flex-col justify-center items-center md:flex-row  w-full mt-10 gap-5">
+
+                            <Link to={'/all_reviews'} className=' bg-emerald-500 text-white px-10 py-4 rounded-full hover:bg-green-500 transition-all duration-200 hover:shadow-lg hover:shadow-emerald-500 w-full max-w-56 text-center'>All Reviews</Link>
+
+                            <Dialog>
+                                {/* <div className=' w-full flex items-center justify-center'> */}
+                                <DialogTrigger className=' bg-green-500 text-white px-10 py-4 rounded-full hover:bg-emerald-500 transition-all duration-200 hover:shadow-lg hover:shadow-green-500 w-full max-w-56 text-center'>Add Your Review</DialogTrigger>
+                                {/* </div> */}
+                                <DialogContent>
+                                    <DialogHeader>
+                                        <DialogTitle className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-8">Add Your <span className=' text-color1'>Review</span></DialogTitle>
+                                        <DialogDescription>
+                                            <div className=' w-full h-auto flex flex-col items-center gap-5'>
+                                                <div className=' flex flex-col w-full gap-3'>
+                                                    <p className=' text-sm text-start'>Click to Rate</p>
+                                                    <div className=' flex gap-3'>
+                                                        {[...Array(5)].map((star, index) => {
+                                                            const currentRating = index + 1;
+
+                                                            return (
+                                                                <label key={index}>
+                                                                    <input
+                                                                        type="radio"
+                                                                        name="rating"
+                                                                        value={currentRating}
+                                                                        onClick={() => { setRating(currentRating) }}
+                                                                        className=' hidden'
+                                                                    />
+                                                                    <FaStar
+                                                                        size={35}
+                                                                        className=' cursor-pointer'
+                                                                        color={currentRating <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
+                                                                        onMouseEnter={() => setHover(currentRating)}
+                                                                        onMouseLeave={() => setHover(null)}
+                                                                    />
+                                                                </label>
+                                                            )
+                                                        })}
+                                                    </div>
+                                                    <p className=' text-sm text-start text-yellow-500'>Your Rating is <span className=' font-bold'>{rating}</span></p>
+                                                </div>
+                                                <div className=" flex flex-col gap-3 md:flex-row w-full">
+                                                    <div className=' flex flex-col gap-2 w-full'>
+                                                        <label htmlFor="fname" className=' text-sm text-start'>First Name</label>
+                                                        <div className=' flex w-full h-auto shadow-lg overflow-hidden rounded-xl border-2 items-center justify-center'>
+                                                            <input type="text" name="fname" id="fname" className=' w-full focus:outline-none py-3 px-2 bg-[#F4FEFF]'></input>
+                                                        </div>
+                                                    </div>
+                                                    <div className=' flex flex-col gap-2 w-full'>
+                                                        <label htmlFor="lname" className=' text-sm text-start'>Last Name</label>
+                                                        <div className=' flex w-full h-auto shadow-lg overflow-hidden rounded-xl border-2 items-center justify-center'>
+                                                            <input type="text" name="lname" id="lname" className=' w-full focus:outline-none py-3 px-2 bg-[#F4FEFF]'></input>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className=' flex flex-col gap-2 w-full'>
+                                                    <div className=" flex justify-between">
+                                                        <label htmlFor="review" className=' text-sm text-start'>Your Review</label>
+                                                        <p className=" text-sm text-red-500">Max words 50 *</p>
+                                                    </div>
+                                                    <div className=' flex w-full h-auto shadow-xl overflow-hidden rounded-xl border-2 items-center justify-center'>
+                                                        <textarea name="review" id="review" className=' w-full focus:outline-none py-2 px-2 bg-[#F4FEFF]' rows={5}></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <button className='bg-green-500 text-white px-10 py-4 rounded-full hover:bg-emerald-500 transition-all duration-200 hover:shadow-lg hover:shadow-green-500'>Add Your Review</button>
+
+                                            </div>
+                                        </DialogDescription>
+                                    </DialogHeader>
+                                </DialogContent>
+                            </Dialog>
+
+
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section className="w-full overflow-hidden bg-white">
@@ -326,9 +470,26 @@ const Home = () => {
                 </div>
             </section>
 
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 };
+
+const StarRate = ({ rate }) => {
+    const stars = Array(5).fill(0);
+
+    for (let i = 0; i < rate; i++) {
+        stars[i] = 1;
+    }
+
+    return (
+        <>
+            {stars.map((star, index) => (
+                <FaStar key={index} className={`${star ? 'text-yellow-500' : ''}`} size={16} />
+            ))
+            }
+        </>
+    );
+}
 
 export default Home;

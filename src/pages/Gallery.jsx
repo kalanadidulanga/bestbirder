@@ -44,7 +44,7 @@ const Gallery = () => {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <PageHeader name="Gallery"/>
 
@@ -70,7 +70,7 @@ const Gallery = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

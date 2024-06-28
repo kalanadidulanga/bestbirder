@@ -43,7 +43,7 @@ const ContactUs = () => {
   return (
     <>
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       <PageHeader name="Contact Us"/>
 
@@ -130,7 +130,7 @@ const ContactUs = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

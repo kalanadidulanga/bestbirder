@@ -29,6 +29,13 @@ module.exports = {
         '5xl': '40px',
       },
       colors: {
+        color1: "#07D2DF",
+        color2: "#324B4D",
+        bg_color1: "#ebfdfe",
+        color3: "#E5E5E5",
+        color4: "#324B4D",
+        color5: "#ebfdfe",
+        color6:"#DDF2F2",
         darkgreen: "#385b00",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -12,3 +12,17 @@ a.active {
     align-items: center;
     gap: 5px;
 }
+.scroll-to-top-btn {
+    /* Existing styles... */
+    bottom: -100%;
+    /* Initially position the button off-screen */
+    transition: all ease-in-out;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+    /* Add smooth transition */
+}
+
+.scroll-to-top-btn.visible {
+    bottom: 0px;
+    /* Move the button to its intended position */
+}

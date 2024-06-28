@@ -7,7 +7,7 @@ import { FaMapLocationDot } from "react-icons/fa6";
 const BestLocations = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <PageHeader name="Best Locations" />
 
@@ -207,7 +207,7 @@ const BestLocations = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

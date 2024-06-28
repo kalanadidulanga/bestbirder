@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 const Tours = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <PageHeader name="Tours" />
 
@@ -50,7 +50,7 @@ const Tours = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

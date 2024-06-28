@@ -138,3 +138,111 @@ export const TOURS_HOME = [
     { title: "Mammal Tours", image: "/tourphotos/mammal tour.jpg", description: "Sri Lanka is a good and easy place to see mammals in Asia and it is easy to see in Dry Zone National Parks in Sri Lanka. A total of 124 mammal species were record in Sri Lanka and 18 species were endemic to the country. Big mammals such as Asia Elephant, Leopard, Sambar, Sloth Bear and Water buffalo can be found in Dry zone national parks in the country. In addition, 30 species of marine mammals were recorded in maritime zone of Sri Lanka as well. The endemic Primate also can be found in certain places. We focused to see most of mammals during Safari and Wet zone visits in Sri Lanka. In addition, we are leading the most fascinating whale and dolphin watching journey in Sri Lanka." },
     { title: "Butterfly Tours", image: "/tourphotos/butterfly tour.jpg", description: "The distribution pattern of butterflies in Sri Lanka is largely determined by climate and topography. Many of butterfly species are generalists and occur in a range of climatic zones due to their ability to survive on a wide range of larval and adult resources and their ability to migrate widely. There are 245 species of butterflies have been recorded from Sri Lanka of which 26 species are endemic to the country.  We are leading the butterfly tour from Dry Zone to Wet Zone in Sri Lanka to find most endemic and rare species to give you a great finding in the island." },
 ]
+
+export const REVIEWS = [
+    {
+        img: 'https://github.com/shadcn.png',
+        name: 'Uditha Kumara', role: 'Seller',
+        rate: 3,
+        description: '"Echo timerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: '/assets/images/person/1.png',
+        name: 'Kalana Didulanga', role: 'Seller',
+        rate: 5,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: 'https://github.com/shadcn.png',
+        name: 'Ranidhu Subashitha', role: 'Customer',
+        rate: 1,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: '/assets/images/person/1.png',
+        name: 'Hansaka Kawshal', role: 'Seller',
+        rate: 4,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: '/assets/images/person/1.png',
+        name: 'Lahiru Viraj', role: 'Seller',
+        rate: 5,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: '/assets/images/person/1.png',
+        name: 'Daham Surendhra', role: 'Seller',
+        rate: 4,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+]
+
+export const ALL_REVIEWS = [
+    {
+        img: 'https://github.com/shadcn.png',
+        name: 'Uditha Kumara', role: 'Seller',
+        rate: 3,
+        description: '"Echo timerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: '/assets/images/person/1.png',
+        name: 'Kalana Didulanga', role: 'Seller',
+        rate: 5,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: 'https://github.com/shadcn.png',
+        name: 'Ranidhu Subashitha', role: 'Customer',
+        rate: 1,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: '/assets/images/person/1.png',
+        name: 'Hansaka Kawshal', role: 'Seller',
+        rate: 4,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: '/assets/images/person/1.png',
+        name: 'Lahiru Viraj', role: 'Seller',
+        rate: 5,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: '/assets/images/person/1.png',
+        name: 'Daham Surendhra', role: 'Seller',
+        rate: 4,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: '/assets/images/person/1.png',
+        name: 'Daham Surendhra', role: 'Seller',
+        rate: 4,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+    {
+        img: '/assets/images/person/1.png',
+        name: 'Daham Surendhra', role: 'Seller',
+        rate: 4,
+        description: '"Echoes of Eternity" is a cinematic marvel that transcends the boundaries of conventional storytelling. From the visionary mind of director James Reynolds, this film takes audiences on a mesmerizing journey through time and space, weaving together elements of science fiction, philosophy, and existential inquiry',
+    },
+]
+
+const allReviews = async () => {
+    setIsLoading(true);
+    setError(null);
+
+    try {
+        const response = await fetch('http://localhost/bestbirdersl.com/server/all-reviews.php');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setData(data);
+    } catch (error) {
+        setError(error);
+    } finally {
+        setIsLoading(false);
+    }
+};

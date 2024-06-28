@@ -14,13 +14,13 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     }
 
+
     return (
         <>
             <div className=" bg-[#385b00]">
                 <div className="  flex flex-col items-center gap-1 py-4 md:flex-row md:justify-between max-container padding-container">
-                    <a href="#" className=" regular-14 text-white items-center gap-2 md:inline-flex hidden">+94772723796<span className=" ">/ peabotuwage@gmail.com</span></a>
-                    <a href="+94742764919" className=" regular-14 text-white flex items-center gap-2 md:hidden">peabotuwage@gmail.com<span className="">/ +94772723796</span></a>
-                    <div id='google_translate_element' className="translate bg-white rounded-xl p-2 w-auto "></div>
+                    <a href="" className=" regular-14 text-white text-center">+94772723796<span className=" ">/ +94716362389</span></a>
+                    <a href="" className=" regular-14 text-white text-center">peabotuwage@gmail.com<span className="">/ peabotuwage@outlook.com</span></a>
                 </div>
             </div>
 
@@ -29,9 +29,9 @@ const Navbar = () => {
 
                     <nav className="flexBetween max-container padding-container relative z-30 py-5">
 
-                        <Link to="/">
+                        <a href="/">
                             <img src="/bestbirder-logo.svg" width={130} height={100} alt="logo" />
-                        </Link>
+                        </a>
 
                         <ul className="hidden h-full lg:gap-8 xl:gap-12 lg:flex">
                             {NAV_LINKS.map((link) => (
@@ -67,6 +67,7 @@ const Navbar = () => {
                 )}
             </div>
             {/* <div className=" border border-cyan-100"></div> */}
+            
         </>
     )
 }

@@ -11,9 +11,11 @@ import PageHeader from "@/components/PageHeader";
 import { SOCIALS } from "@/constants";
 
 const AboutUs = () => {
+
+
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <PageHeader name="About Us" />
 
@@ -149,7 +151,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

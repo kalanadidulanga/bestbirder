@@ -12,7 +12,7 @@ const Policy = () => {
   return (
 
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <PageHeader name="Contact Us"/>
 
@@ -58,7 +58,7 @@ const Policy = () => {
         </div>
       </section>
       
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

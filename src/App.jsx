@@ -16,6 +16,10 @@ import './app.css'
 import { AnimatePresence } from "framer-motion";
 import { Toaster } from "./components/ui/toaster";
 import BestLocations from "./pages/BestLocations";
+import AllReviews from "./pages/AllReviews";
+import Login from "./pages/adminPages/Login";
+import Dashboard from "./pages/adminPages/Dashboard";
+import ClientLayout from "./layouts/ClientLayout";
 
 function App() {
 
@@ -24,17 +28,23 @@ function App() {
   return (
     <>
       {/* <Navbar /> */}
-        <Routes location={location} key={location.pathname}>
+      <Routes location={location} key={location.pathname}>
+        <Route element={<ClientLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/tours" element={<Tours />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/policy" element={<Policy />} />
           <Route path="/contact_us" element={<ContactUs />} />
-          <Route path="/locations" element={<BestLocations/>} />
-        </Routes>
+          <Route path="/locations" element={<BestLocations />} />
+          <Route path="/all_reviews" element={<AllReviews />} />
+        </Route>
 
-        <Toaster/>
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+
+      <Toaster />
       {/* <Footer/> */}
     </>
   )
