@@ -58,7 +58,7 @@ const AboutUs = () => {
 
               <div className=" flex flex-col flex-1 items-center">
                 <h4 className=" bold-18 md:bold-20 lg:bold-32 mb-2 lg:mb-4 text-primary">
-                  Tour Operator
+                  Tour Leader
                 </h4>
                 <div className=" max-w-4xl rounded-xl flex items-center justify-center my-5">
                   <img
@@ -70,7 +70,7 @@ const AboutUs = () => {
                 <h5 className="bold-18 md:bold-20 lg:bold-32 mb-1 lg:mb-2">
                   Mr. Indika Peabotuwage
                 </h5>
-                {/* <p className=" max-w-4xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
+                <p className=" max-w-4xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                   I am Indika Peabotuwage and the founder of the Best Birder
                   tour group in Sri Lanka. I also worked as a field biologist
                   and an ornithologist in South and East Asia. I have been
@@ -86,22 +86,39 @@ const AboutUs = () => {
                   University in China. Furthermore, I have gained knowledge and
                   experience with tropical bird flocks, migratory birds, and flora in
                   South and East Asia.
-                </p> */}
-                <p className=" max-w-4xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
-                  Dhammithra Samarasinghe is one of the talented tour operators in Sri Lanka. He has been working in Bird and Wildlife tourism field nearly 25 years in the country. He has gained knowledge of both fauna and flora in Sri Lanka and also an experienced wildlife researcher in academic and conservation level including local and international platform. Where natural history is concerned his knowledge is sound and scientific and he knows where to creep and crawl in search of the rare jewel of the client desire.
                 </p>
-                {/* <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide ml-10 mt-3'>
-                  Ferry Slik <br />
-                  Professor &amp; Curator of the UBD Herbarium <br />
-                  Faculty of Science, <br />
-                  Universiti Brunei Darussalam, <br />
-                  Jln Tungku Link, Gadong, BE1410, Brunei Darussalam. <br />
-                </p> */}
               </div>
 
-              <div className=" flex-col lg:flex-row flex w-full h-auto gap-5 md:gap-8 lg:gap-10">
+              <div className=" flex flex-col flex-1 items-center">
+                <h4 className=" font-bold text-xl md:text-2xl lg:text-3xl mb-2 lg:mb-2 text-primary">
+                  Tour Operator
+                </h4>
+                <div className=" flex flex-col lg:flex-row gap-5 lg:gap-10 mt-5 items-center">
+                  <div className=" max-w-4xl max-h-[400px] overflow-hidden rounded-xl flex items-center justify-center my-5">
+                    <img
+                      src="/images/persons/Dhammithra.jpg"
+                      alt=""
+                      className=" object-cover object-center rounded-xl hover:shadow-xl hover:brightness-90 transition-all duration-300"
+                    />
+                  </div>
+                  <div className=" flex flex-col">
+                    <h5 className="bold-14 md:bold-18 lg:bold-20 mb-1 lg:mb-2">
+                      Mr. Dhammithra Samarasinghe
+                    </h5>
+                    <p className=" max-w-4xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
+                      Dhammithra Samarasinghe is one of the talented tour operators in Sri Lanka. He has been working in Bird and Wildlife tourism field nearly 25 years in the country. He has gained knowledge of both fauna and flora in Sri Lanka and also an experienced wildlife researcher in academic and conservation level including local and international platform. Where natural history is concerned his knowledge is sound and scientific and he knows where to creep and crawl in search of the rare jewel of the client desire.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+              <h4 className=" font-bold text-xl md:text-2xl lg:text-3xl text-primary mt-10">
+                Advisory Board
+              </h4>
+              <div className=" flex-col lg:flex-row flex w-full h-auto gap-8 lg:gap-10">
                 <div className=" flex flex-col flex-1">
-                  <div className=" rounded-md shadow-xl max-w-[400px] max-h-[300px] overflow-hidden w-full h-auto grid place-items-center">
+                  <div className=" rounded-md shadow-xl max-w-[400px] max-h-[400px] overflow-hidden w-full h-auto grid place-items-center">
                     <img src="/images/persons/Aiwu.jpg" alt="aiwu" className=" w-full h-full object-cover" />
                   </div>
                   <div className=" flex flex-col mt-3">
@@ -124,7 +141,7 @@ const AboutUs = () => {
                 </div>
 
                 <div className=" flex flex-col flex-1">
-                  <div className=" rounded-md shadow-xl max-w-[400px] max-h-[300px] overflow-hidden w-full h-auto grid place-items-center">
+                  <div className=" rounded-md shadow-xl max-w-[400px] max-h-[400px] overflow-hidden w-full h-auto grid place-items-center">
                     <img src="/images/persons/Emileo.jpg" alt="Emileo" className=" w-full h-full object-cover" />
                   </div>
                   <div className=" flex flex-col mt-3">
@@ -144,8 +161,8 @@ const AboutUs = () => {
                 </div>
 
                 <div className=" flex flex-col flex-1">
-                  <div className=" rounded-md shadow-xl max-w-[400px] max-h-[300px] overflow-hidden w-full h-auto grid place-items-center">
-                    <img src="/images/persons/Aiwu.jpg" alt="aiwu" className=" w-full h-full object-cover" />
+                  <div className=" rounded-md shadow-xl max-w-[400px] max-h-[400px] overflow-hidden w-full h-auto grid place-items-center">
+                    <img src="/images/persons/111.jpg" alt="Deppthi" className=" w-full h-full object-cover" />
                   </div>
                   <div className=" flex flex-col mt-3">
                     <p className=" text-lg font-bold">
@@ -162,29 +179,6 @@ const AboutUs = () => {
                     </p>
                     <p className=" text-muted-foreground">
                       Sri Lanka.
-                    </p>
-                  </div>
-                </div>
-
-                <div className=" flex flex-col flex-1">
-                  <div className=" rounded-md shadow-xl max-w-[400px] max-h-[300px] overflow-hidden w-full h-auto grid place-items-center">
-                    <img src="/images/persons/Dhammithra.jpg" alt="aiwu" className=" w-full h-full object-cover" />
-                  </div>
-                  <div className=" flex flex-col mt-3">
-                    <p className=" text-lg font-bold">
-                      Professor Jiang Aiwu
-                    </p>
-                    <p className=" text-muted-foreground">
-                      College of Forestry
-                    </p>
-                    <p className=" text-muted-foreground">
-                      Behavioral and Community Ecology, Conservation Biology Group
-                    </p>
-                    <p className=" text-muted-foreground">
-                      College of Forestry, Guangxi University
-                    </p>
-                    <p className=" text-muted-foreground">
-                      Nanning, PR China.
                     </p>
                   </div>
                 </div>
@@ -212,7 +206,7 @@ const AboutUs = () => {
               Email:
             </p>
             <p className=" max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide">
-            info@bestbirdersl.com / bestbirdersl@gmail.com
+              info@bestbirdersl.com / bestbirdersl@gmail.com
             </p>
 
             <p className=" max-w-4xl text-left bold-16 md:bold-18 lg:bold-20 tracking-wide mt-5">
