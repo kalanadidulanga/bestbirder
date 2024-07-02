@@ -34,41 +34,6 @@ export const HOME_CAROUSEL = [
     },
     {
         title: 'BESTBIRDER',
-        src: '/homepage5.jpg',
-        css: 'green',
-        sub:
-            'Travel with Sri Lanka',
-    },
-    {
-        title: 'BESTBIRDER',
-        src: '/homepage2.jpg',
-        css: 'green',
-        sub:
-            'Travel with Sri Lanka',
-    },
-    {
-        title: 'BESTBIRDER',
-        src: '/homepage6.jpg',
-        css: 'green',
-        sub:
-            'Travel with Sri Lanka',
-    },
-    {
-        title: 'BESTBIRDER',
-        src: '/homepage7.jpg',
-        css: 'green',
-        sub:
-            'Travel with Sri Lanka',
-    },
-    {
-        title: 'BESTBIRDER',
-        src: '/homepage10.jpg',
-        css: 'green',
-        sub:
-            'Travel with Sri Lanka',
-    },
-    {
-        title: 'BESTBIRDER',
         src: '/images/birds/1.jpg',
         css: 'green',
         sub:
@@ -84,20 +49,6 @@ export const HOME_CAROUSEL = [
     {
         title: 'BESTBIRDER',
         src: '/images/birds/3.JPG',
-        css: 'green',
-        sub:
-            'Travel with Sri Lanka',
-    },
-    {
-        title: 'BESTBIRDER',
-        src: '/images/birds/4.jpg',
-        css: 'green',
-        sub:
-            'Travel with Sri Lanka',
-    },
-    {
-        title: 'BESTBIRDER',
-        src: '/images/birds/5.jpg',
         css: 'green',
         sub:
             'Travel with Sri Lanka',

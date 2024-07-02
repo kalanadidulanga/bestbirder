@@ -21,7 +21,7 @@ const Footer = () => {
                 <FooterColumn title={columns.title} key={index}>
                   <ul className=' regular-14 flex flex-col gap-2 text-gray-30 text-center'>
                     {columns.links.map((link) => (
-                      <Link to={link.href} key={link.key} className=' hover:text-green-300 focus:text-emerald-500 duration-300'>
+                      <Link to={link.href} key={link.key} className=' hover:text-primary2 focus:text-primary duration-300'>
                         {link.label}
                       </Link>
                     ))}

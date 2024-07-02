@@ -58,7 +58,7 @@ const AboutUs = () => {
 
               <div className=" flex flex-col flex-1 items-center">
                 <h4 className=" bold-18 md:bold-20 lg:bold-32 mb-2 lg:mb-4 text-primary">
-                  Tour Leader
+                  Director
                 </h4>
                 <div className=" max-w-4xl rounded-xl flex items-center justify-center my-5">
                   <img
@@ -71,21 +71,7 @@ const AboutUs = () => {
                   Mr. Indika Peabotuwage
                 </h5>
                 <p className=" max-w-4xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
-                  I am Indika Peabotuwage and the founder of the Best Birder
-                  tour group in Sri Lanka. I also worked as a field biologist
-                  and an ornithologist in South and East Asia. I have been
-                  working in wildlife research and tourism for nearly 15 years.
-                  My studies mainly focus on wildlife conservation and
-                  management at the Open University of Sri Lanka and the
-                  Postgraduate Institute of Archeology, University of Kelaniya,
-                  Sri Lanka. I have been working at the Department of Botany,
-                  Faculty of Science, University of Peradeniya and the Young
-                  Zoologist Association of Sri Lanka National Zoo, Sri Lanka, as
-                  well as Xishuangbanna Tropical Botanical Garden, Chinese
-                  Academy of Sciences and the College of Forestry, Guangxi
-                  University in China. Furthermore, I have gained knowledge and
-                  experience with tropical bird flocks, migratory birds, and flora in
-                  South and East Asia.
+                Mr. Indika Peabotuwage is the founder of the Best Birder tour group in Sri Lanka. With nearly 15 years of experience, Indika has worked as a field biologist and ornithologist in South and East Asia. His academic pursuits focus on wildlife conservation and management at the Open University of Sri Lanka and the Postgraduate Institute of Archaeology, University of Kelaniya, Sri Lanka. Indika has also been affiliated with the Department of Botany at the University of Peradeniya, the Young Zoologist Association of Sri Lanka National Zoo, Xishuangbanna Tropical Botanical Garden of the Chinese Academy of Sciences, and the College of Forestry at Guangxi University in China. He possesses extensive knowledge and experience with tropical bird flocks, migratory birds, and flora in South and East Asia.
                 </p>
               </div>
 
