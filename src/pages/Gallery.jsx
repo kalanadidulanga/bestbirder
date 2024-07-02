@@ -53,7 +53,7 @@ const Gallery = () => {
           <div className="max-container padding-container items-center flex flex-col">
             <h4 className=" font-kalam regular-24 md:regular-32 lg:regular-40 text-primary3">BestBirder</h4>
             <h2 className=" bold-32 md:bold-40 lg:bold-52 mb-10">Image Gallery</h2>
-            <div className="image-gallery columns-3 lg:columns-4">
+            <div className="image-gallery columns-2 lg:columns-4">
               <LightGallery
                 onInit={onInit}
                 speed={500}

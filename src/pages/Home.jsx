@@ -393,7 +393,7 @@ const Home = () => {
                         <h2 className=" bold-32 md:bold-40 lg:bold-52 mb-10">
                             Image Gallery
                         </h2>
-                        <div className=" columns-3 lg:columns-4 image-gallery">
+                        <div className=" columns-2 lg:columns-4 image-gallery">
                             <LightGallery
                                 onInit={onInit}
                                 speed={500}
