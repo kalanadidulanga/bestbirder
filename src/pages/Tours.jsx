@@ -39,7 +39,7 @@ const Tours = () => {
                     </CardContent>
                     <CardFooter className="flex flex-col absolute inset-x-0 bottom-0">
                       <div className=' border w-full m-0 p-0 border-gray'></div>
-                      <Link to={"/contact_us"} className='mt-5 cursor-pointer'><p className=' bold-18 hover:text-green-500 duration-200'>Contact us</p></Link>
+                      <Link to={"/contact_us"} className='mt-5 cursor-pointer'><p className=' bold-18 hover:text-primary transition-all duration-200'>Contact us</p></Link>
                     </CardFooter>
                   </Card>
                 ))}

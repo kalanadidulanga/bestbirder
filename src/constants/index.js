@@ -10,6 +10,28 @@ export const NAV_LINKS = [
 ];
 
 export const HOME_CAROUSEL = [
+
+    {
+        title: 'BESTBIRDER',
+        src: '/images/birds/6.JPG',
+        css: 'green',
+        sub:
+            'Travel with Sri Lanka',
+    },
+    {
+        title: 'BESTBIRDER',
+        src: '/images/birds/7.jpg',
+        css: 'green',
+        sub:
+            'Travel with Sri Lanka',
+    },
+    {
+        title: 'BESTBIRDER',
+        src: '/images/birds/8.JPG',
+        css: 'green',
+        sub:
+            'Travel with Sri Lanka',
+    },
     {
         title: 'BESTBIRDER',
         src: '/homepage5.jpg',
@@ -44,7 +66,42 @@ export const HOME_CAROUSEL = [
         css: 'green',
         sub:
             'Travel with Sri Lanka',
-    }
+    },
+    {
+        title: 'BESTBIRDER',
+        src: '/images/birds/1.jpg',
+        css: 'green',
+        sub:
+            'Travel with Sri Lanka',
+    },
+    {
+        title: 'BESTBIRDER',
+        src: '/images/birds/2.JPG',
+        css: 'green',
+        sub:
+            'Travel with Sri Lanka',
+    },
+    {
+        title: 'BESTBIRDER',
+        src: '/images/birds/3.JPG',
+        css: 'green',
+        sub:
+            'Travel with Sri Lanka',
+    },
+    {
+        title: 'BESTBIRDER',
+        src: '/images/birds/4.jpg',
+        css: 'green',
+        sub:
+            'Travel with Sri Lanka',
+    },
+    {
+        title: 'BESTBIRDER',
+        src: '/images/birds/5.jpg',
+        css: 'green',
+        sub:
+            'Travel with Sri Lanka',
+    },
 ];
 
 // CAMP SECTION
@@ -106,10 +163,10 @@ export const FOOTER_LINKS = [
 export const FOOTER_CONTACT_INFO = {
     title: 'Contact Us',
     links: [
-        { value1: 'peabotuwage@outlook.com', },
-        { value1: 'peabotuwage@gmail.com', },
-        { value1: '+94 716362389', },
-        { value1: '+94 772723796', },
+        { value1: 'info@bestbirdersl.com', },
+        { value1: 'bestbirdersl@gmail.com', },
+        { value1: '+94716362389', },
+        { value1: '+94772723796', },
     ],
 };
 
