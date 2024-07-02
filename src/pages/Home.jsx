@@ -11,7 +11,7 @@ import {
 import { HOME_CAROUSEL, REVIEWS, TOURS_HOME } from "@/constants";
 import Autoplay from "embla-carousel-autoplay";
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style.css";
 import { FaStar } from "react-icons/fa";
 
@@ -54,6 +54,8 @@ import GoToTop from "@/components/GoToTop";
 
 
 const Home = () => {
+    const navigate = useNavigate();
+
     const plugin = React.useRef(
         Autoplay({ delay: 5000, stopOnInteraction: true })
     );
@@ -126,6 +128,7 @@ const Home = () => {
                             {/* <p className=" text-white regular-14 lg:regular-20 leading-normal inline-flex md:hidden pt-5" style={{ textShadow: '0px 0px 10px white' }}>
                                 Your gateway to Sri Lanka's avian wonders. 15+ years of expertise, crafting ultimate wildlife & birding adventures for nature lovers.
                             </p> */}
+                            <Button variant="default" className="mt-5 max-w-52" onClick={() => {navigate('/about_us')}}>About us</Button>
                         </div>
                     </div>
                 </div>
@@ -135,20 +138,20 @@ const Home = () => {
                 <div className=" w-full  bg-tour bg-cover bg-center">
                     <div className=" bg-white/90   py-24">
                         <div className="max-container padding-container items-center flex flex-col">
-                            <h4 className=" font-kalam regular-24 md:regular-32 lg:regular-40 text-green-500">
+                            <h4 className=" font-kalam regular-24 md:regular-32 lg:regular-40 text-primary3">
                                 BestBirder
                             </h4>
-                            <h2 className=" bold-32 md:bold-40 lg:bold-52 tracking-wide">
+                            <h2 className=" bold-32 md:bold-40 lg:bold-52 tracking-wide text-primary">
                                 Tours
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 lg:gap-14 mb-16 pt-10">
                                 {TOURS_HOME.map((props, index) => (
                                     <Card
                                         key={index}
-                                        className="backdrop-blur-sm bg-white/30  w-full"
+                                        className="backdrop-blur-sm bg-white/60  w-full"
                                     >
                                         <CardHeader>
-                                            <CardTitle className="py-3">{props.title}</CardTitle>
+                                            <CardTitle className="py-3 text-slate-600">{props.title}</CardTitle>
                                             <div className=" w-full h-64 flex justify-center items-center overflow-hidden rounded-xl">
                                                 <img
                                                     src={props.image}
@@ -166,7 +169,7 @@ const Home = () => {
                                         <CardFooter className="flex flex-col absolute inset-x-0 bottom-0">
                                             <div className=" border w-full m-0 p-0 border-gray"></div>
                                             <Link to={"/contact_us"} className="mt-5 cursor-pointer">
-                                                <p className=" bold-18 hover:text-green-500 duration-200">
+                                                <p className=" bold-18 hover:text-primary transition-all duration-200">
                                                     Contact us
                                                 </p>
                                             </Link>
@@ -176,7 +179,7 @@ const Home = () => {
                             </div>
                             <Button
                                 asChild
-                                className=" w-[180px] py-7 bg-green-500 hover:bg-emerald-500 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300"
+                                className=" w-[180px] py-7 bg-primary hover:bg-primary2 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-primary2/50 transition-all duration-300"
                                 size={"lg"}
                             >
                                 <Link to="/tours" className="">
@@ -193,7 +196,7 @@ const Home = () => {
                     <div className="max-container padding-container h-full py-24">
                         <div className=" flex flex-col gap-2 lg:gap-4">
                             <h1
-                                className="bold-32 lg:bold-40 mb-3 lg:mb-7 text-green-500"
+                                className="bold-32 lg:bold-40 mb-3 lg:mb-7 text-primary3"
                             >
                                 Bird Migration
                             </h1>
@@ -220,7 +223,7 @@ const Home = () => {
                         />
                     </div>
                     <div className=" gap-5 lg:gap-10 flex flex-1 flex-col lg:justify-center">
-                        <h4 className=" font-kalam regular-24 md:regular-32 lg:regular-40 text-green-500">
+                        <h4 className=" font-kalam regular-24 md:regular-32 lg:regular-40 text-primary3">
                             About BestBirder
                         </h4>
                         <h2 className=" bold-32 md:bold-40 lg:bold-52">
@@ -235,7 +238,7 @@ const Home = () => {
                         <div className=" flex gap-3 flex-col md:flex-row">
                             <Button
                                 asChild
-                                className=" w-[180px] py-7 bg-green-500 hover:bg-emerald-500 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300"
+                                className=" w-[180px] py-7 bg-primary hover:bg-primary2 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-primary2/50 transition-all duration-300"
                                 size={"lg"}
                             >
                                 <Link to="/about_us" className="">
@@ -245,7 +248,7 @@ const Home = () => {
 
                             <Button
                                 asChild
-                                className=" w-[180px] py-7 bg-emerald-500 hover:bg-green-500 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300"
+                                className=" w-[180px] py-7 bg-primary2 hover:bg-primary text-white rounded-xl text-lg hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
                                 size={"lg"}
                             >
                                 <Link to="/contact_us" className="">
@@ -260,12 +263,12 @@ const Home = () => {
 
 
             {/* review section  */}
-            <section className=" w-full overflow-hidden bg-white">
+            <section className=" w-full overflow-hidden bg-primary2/20">
                 <div className=" max-container padding-container w-full py-24">
                     <div className=' flex flex-col w-full h-auto'>
 
                         <div className=" flex flex-col gap-3 w-full h-auto items-center pb-10">
-                            <h1 className=" text-5xl md:text-6xl font-bold text-center text-emerald-500">Our Reviews</h1>
+                            <h1 className=" text-5xl md:text-6xl font-bold text-center text-primary">Our Reviews</h1>
                             <p className=" text-sm text-gray-700 text-center">All of your reviews have a personal touch</p>
                         </div>
 
@@ -304,11 +307,11 @@ const Home = () => {
 
                         <div className=" flex flex-col justify-center items-center md:flex-row  w-full mt-10 gap-5">
 
-                            <Link to={'/all_reviews'} className=' bg-emerald-500 text-white px-10 py-4 rounded-full hover:bg-green-500 transition-all duration-200 hover:shadow-lg hover:shadow-emerald-500 w-full max-w-56 text-center'>All Reviews</Link>
+                            <Link to={'/all_reviews'} className=' bg-primary text-white px-10 py-4 rounded-full hover:bg-primary2 transition-all duration-200 hover:shadow-lg hover:shadow-primary2 w-full max-w-56 text-center'>All Reviews</Link>
 
                             <Dialog>
                                 {/* <div className=' w-full flex items-center justify-center'> */}
-                                <DialogTrigger className=' bg-green-500 text-white px-10 py-4 rounded-full hover:bg-emerald-500 transition-all duration-200 hover:shadow-lg hover:shadow-green-500 w-full max-w-56 text-center'>Add Your Review</DialogTrigger>
+                                <DialogTrigger className=' bg-primary2 text-white px-10 py-4 rounded-full hover:bg-primary transition-all duration-200 hover:shadow-lg hover:shadow-primary w-full max-w-56 text-center'>Add Your Review</DialogTrigger>
                                 {/* </div> */}
                                 <DialogContent>
                                     <DialogHeader>
@@ -384,7 +387,7 @@ const Home = () => {
             <section className="w-full overflow-hidden bg-white">
                 <div className=" w-full   bg-cover bg-center  py-24">
                     <div className="max-container padding-container items-center flex flex-col">
-                        <h4 className=" font-kalam regular-24 md:regular-32 lg:regular-40 text-green-500">
+                        <h4 className=" font-kalam regular-24 md:regular-32 lg:regular-40 text-primary3">
                             BestBirder
                         </h4>
                         <h2 className=" bold-32 md:bold-40 lg:bold-52 mb-10">
@@ -409,7 +412,7 @@ const Home = () => {
                         </div>
                         <Button
                             asChild
-                            className=" w-[180px] mt-10 py-7 bg-green-500 hover:bg-emerald-500 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300"
+                            className=" w-[180px] mt-10 py-7 bg-primary hover:bg-primary2 text-white rounded-xl text-lg hover:shadow-lg hover:shadow-primary2/50 transition-all duration-300"
                             size={"lg"}
                         >
                             <Link to="/gallery" className="">
@@ -420,20 +423,20 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="w-full flexCenter overflow-hidden bg-banner4 bg-cover bg-top brightness-90">
-                <div className=" bg-black/20 w-full h-full">
+            <section className="w-full flexCenter overflow-hidden bg-banner4 bg-cover bg-top">
+                <div className=" bg-primary2/30 w-full h-full">
                     <div className="max-container padding-container h-full py-24">
                         <div className=" flex flex-col gap-2 lg:gap-4">
                             <h1
-                                className="bold-32 lg:bold-40 mb-3 lg:mb-7 text-green-500"
-                                style={{ textShadow: "0px 0px 10px green" }}
+                                className="bold-32 lg:bold-40 mb-3 lg:mb-7 text-primary"
+                                // style={{ textShadow: "0px 0px 5px blue" }}
                             >
                                 Sri Lanka
                             </h1>
 
                             <p
                                 className=" regular-14 lg:regular-18 text-white tracking-wide leading-relaxed text-justify indent-8 lg:indent-20"
-                                style={{ textShadow: "0px 0px 5px black" }}
+                                // style={{ textShadow: "0px 0px 5px black" }}
                             >
                                 Sri Lanka is a tropical island lies in the Indian Ocean between
                                 latitudes 5° and 10° N, and longitudes 79° and 82° E with the
@@ -454,7 +457,7 @@ const Home = () => {
 
                             <p
                                 className=" regular-14 lg:regular-18 text-white tracking-wide leading-relaxed text-justify indent-8 lg:indent-20"
-                                style={{ textShadow: "0px 0px 5px black" }}
+                                // style={{ textShadow: "0px 0px 5px black" }}
                             >
                                 Among the many taxa that are found in Sri Lanka, birds are
                                 perhaps the most attractive faunal group. Birds have been an

@@ -27,7 +27,7 @@ const GoToTop = () => {
                 onClick={handleScrollToTop}
             >
                 {/* Button content (e.g., arrow icon) */}
-                <GoMoveToTop className=' text-emerald-500' size={25} />
+                <GoMoveToTop className=' text-primary2' size={25} />
             </button>
         // </div>
 
