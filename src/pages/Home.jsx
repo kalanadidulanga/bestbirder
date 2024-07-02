@@ -102,7 +102,7 @@ const Home = () => {
                 </Carousel>
 
                 <div className=" absolute z-30 w-full lg:h-[40vw] md:h-[50vw] h-[60vw] overflow-hidden bg-black/30">
-                    <div className="flex justify-start items-center w-full h-full max-container padding-container">
+                    <div className="flex justify-start items-end w-full h-full max-container padding-container">
                         <div className=" flex justify-center flex-col max-w-[800px] py-5">
                             <h3
                                 className=" text-white bold-20 md:bold-40 lg:bold-64 tracking-normal "
@@ -111,7 +111,7 @@ const Home = () => {
                                 Travel With
                             </h3>
                             <h1
-                                className=" text-white bold-40 md:bold-64 lg:bold-88 tracking-widest uppercase "
+                                className=" text-white bold-40 md:bold-64 lg:bold-88 tracking-widest uppercase md:mb-10"
                                 style={{ textShadow: "0px 0px 10px white" }}
                             >
                                 BestBirder
@@ -128,7 +128,27 @@ const Home = () => {
                             {/* <p className=" text-white regular-14 lg:regular-20 leading-normal inline-flex md:hidden pt-5" style={{ textShadow: '0px 0px 10px white' }}>
                                 Your gateway to Sri Lanka's avian wonders. 15+ years of expertise, crafting ultimate wildlife & birding adventures for nature lovers.
                             </p> */}
-                            <Button variant="default" className="mt-5 max-w-52" onClick={() => {navigate('/about_us')}}>About us</Button>
+                            {/* <Button variant="default" className="mt-5 max-w-52 md:mb-10" onClick={() => { navigate('/about_us') }}>About us</Button> */}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className=" w-full h-auto overflow-hidden">
+                <div className=" w-full h-auto py-24 bg-primary2/20">
+                    <div className="max-container padding-container w-full h-full">
+                        <div className=" flex flex-col lg:flex-row gap-5 md:gap-8 lg:gap-10">
+                            <div className=" flex flex-col flex-1 items-center justify-center overflow-hidden rounded-lg w-full h-auto">
+                                <img src="/images/persons/conference_photo.jpg" alt="conference" className=" object-cover w-full" />
+                            </div>
+                            <div className=" flex flex-col flex-1">
+                                <h4 className=" font-bold text-center text-xl md:text-2xl lg:text-3xl tracking-wide text-primary">
+                                    Research and Conservation
+                                </h4>
+                                <p className=" text-justify text-sm md:text-base mt-5 indent-16">
+                                Today, half of the forests have been lost due to deforestation, agriculture, forest industry and urbanization in the world and its continues to lose 15million hectares of forests each year (Hermosilla A.C. 2000). We highly believe and consider eco-friendly tourism in Sri Lanka as well as in the world. It spurs global education and encourages awareness of the issues of habitat degradation and biodiversity loss. For that, we also conduct biodiversity conservation and research projects in Sri Lanka. In addition we published peer reviews in local and international journals of <a href="https://www.researchgate.net/profile/Indika-Peabotuwage" target="_blank" rel="noopener noreferrer" className=" text-primary3 hover:underline">our research findings</a>. We addressed school students and public audiences to how important biodiversity conservation is at the moment on a global scale. Furthermore, we are contributing our knowledge and data with government and non-government organizations for their activities (Ex: National Red List) in conservation. We provide clay bottles for clients to bring a message and reduce plastic usage. At the end, we bring our conservation message to our clients during their tours and let them understand how important biodiversity conservation and eco-friendly tourism is on the planet.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -429,14 +449,14 @@ const Home = () => {
                         <div className=" flex flex-col gap-2 lg:gap-4">
                             <h1
                                 className="bold-32 lg:bold-40 mb-3 lg:mb-7 text-primary"
-                                // style={{ textShadow: "0px 0px 5px blue" }}
+                            // style={{ textShadow: "0px 0px 5px blue" }}
                             >
                                 Sri Lanka
                             </h1>
 
                             <p
                                 className=" regular-14 lg:regular-18 text-white tracking-wide leading-relaxed text-justify indent-8 lg:indent-20"
-                                // style={{ textShadow: "0px 0px 5px black" }}
+                            // style={{ textShadow: "0px 0px 5px black" }}
                             >
                                 Sri Lanka is a tropical island lies in the Indian Ocean between
                                 latitudes 5° and 10° N, and longitudes 79° and 82° E with the
@@ -457,7 +477,7 @@ const Home = () => {
 
                             <p
                                 className=" regular-14 lg:regular-18 text-white tracking-wide leading-relaxed text-justify indent-8 lg:indent-20"
-                                // style={{ textShadow: "0px 0px 5px black" }}
+                            // style={{ textShadow: "0px 0px 5px black" }}
                             >
                                 Among the many taxa that are found in Sri Lanka, birds are
                                 perhaps the most attractive faunal group. Birds have been an
