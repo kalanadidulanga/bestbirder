@@ -14,7 +14,8 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const authToken = Cookies.get('auth_token');
-        const userId = Cookies.get('user_id');
+        // const userId = Cookies.get('user_id');
+        const userId = user ? user.id : null;
         if (authToken) {
             // Fetch user details using the token or from a stored user state
             const handleAuth = async () => {
@@ -53,7 +54,7 @@ const AuthProvider = ({ children }) => {
 
             handleAuth();
         } else {
-            navigate('/login');
+            // navigate('/login');
         }
     }, []);
 
