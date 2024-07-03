@@ -21,6 +21,7 @@ import Login from "./pages/adminPages/Login";
 import Dashboard from "./pages/adminPages/Dashboard";
 import ClientLayout from "./layouts/ClientLayout";
 import SingleTour from "./pages/SingleTour";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
 
@@ -43,7 +44,9 @@ function App() {
         </Route>
 
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <ProtectedRoute>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </ProtectedRoute>
       </Routes>
 
       <Toaster />

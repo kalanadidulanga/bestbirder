@@ -1,14 +1,49 @@
 // import { Button2 } from '@/components/ui/button2';
 import { Button } from '@/components/ui/button';
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
+import { AuthContext } from '@/contexts/AuthProvider';
+import axios from 'axios';
+import toast from 'react-hot-toast';
+import { BACKEND_URL } from '@/constants';
 
 const Login = () => {
 
+    const { login } = useContext(AuthContext);
+    const [isLoading, setIsLoading] = useState(false);
     const [isErrorEmail, setIsErrorEmail] = useState(false);
     const [isErrorPass, setIsErrorPass] = useState(false);
+
+    const [dataSet, setDataSet] = useState({
+        email: '',
+        password: '',
+    })
+
+    const handleLogin = async (email, password) => {
+        setIsLoading(true);
+        try {
+            const response = await axios.post(`${BACKEND_URL}/login.php`, {
+                email: email,
+                password: password,
+            });
+
+            if (response.data.success) {
+                toast.success(response.data.message || 'Login successful');
+
+                login(response.data.user);
+            } else {
+                toast.error(response.data.message || 'Login failed');
+                console.log(response.data.message);
+                // handle error
+            }
+        } catch (error) {
+            console.error('There was an error!', error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
     return (
         <>
@@ -40,6 +75,8 @@ const Login = () => {
                                             id="email"
                                             className=" w-full h-full bg-transparent focus:outline-none text-sm"
                                             placeholder="Enter Your Email Address"
+                                            onChange={(e) => {setDataSet((prev)=>({...prev, email: e.target.value}))}}
+                                            value={dataSet.email}
                                         />
                                     </div>
                                     <p className={` text-red-700 font-bold ${isErrorEmail ? 'inline-flex' : 'hidden'}`}>
@@ -58,6 +95,8 @@ const Login = () => {
                                             id="pass"
                                             className={` w-full h-full bg-transparent focus:outline-none text-sm ${isErrorPass && 'placeholder-[#8B2411]'}`}
                                             placeholder="Enter Your Password"
+                                            onChange={(e) => {setDataSet((prev)=>({...prev, password: e.target.value}))}}
+                                            value={dataSet.password}
                                         />
                                     </div>
                                     <p className={` text-red-700 font-bold ${isErrorPass ? 'inline-flex' : 'hidden'}`}>
@@ -65,7 +104,7 @@ const Login = () => {
                                     </p>
                                 </div>
 
-                                <Button variant='default4' size='auto' className='mt-5' onClick={() => { }}>LOGIN</Button>
+                                <Button disabled={isLoading} onClick={() => handleLogin(dataSet.email, dataSet.password)} variant='default' size='auto' className='mt-5 w-full max-w-sm'>LOGIN</Button>
 
                             </div>
                         </div>
