@@ -146,7 +146,7 @@ const Home = () => {
                                     Research and Conservation
                                 </h4>
                                 <p className=" text-justify text-sm md:text-base mt-5 indent-16">
-                                Today, half of the forests have been lost due to deforestation, agriculture, forest industry and urbanization in the world and its continues to lose 15million hectares of forests each year (Hermosilla A.C. 2000). We highly believe and consider eco-friendly tourism in Sri Lanka as well as in the world. It spurs global education and encourages awareness of the issues of habitat degradation and biodiversity loss. For that, we also conduct biodiversity conservation and research projects in Sri Lanka. In addition we published peer reviews in local and international journals of <a href="https://www.researchgate.net/profile/Indika-Peabotuwage" target="_blank" rel="noopener noreferrer" className=" text-primary3 hover:underline">our research findings</a>. We addressed school students and public audiences to how important biodiversity conservation is at the moment on a global scale. Furthermore, we are contributing our knowledge and data with government and non-government organizations for their activities (Ex: National Red List) in conservation. We provide clay bottles for clients to bring a message and reduce plastic usage. At the end, we bring our conservation message to our clients during their tours and let them understand how important biodiversity conservation and eco-friendly tourism is on the planet.
+                                    Today, half of the forests have been lost due to deforestation, agriculture, forest industry and urbanization in the world and its continues to lose 15million hectares of forests each year (Hermosilla A.C. 2000). We highly believe and consider eco-friendly tourism in Sri Lanka as well as in the world. It spurs global education and encourages awareness of the issues of habitat degradation and biodiversity loss. For that, we also conduct biodiversity conservation and research projects in Sri Lanka. In addition we published peer reviews in local and international journals of <a href="https://www.researchgate.net/profile/Indika-Peabotuwage" target="_blank" rel="noopener noreferrer" className=" text-primary3 hover:underline">our research findings</a>. We addressed school students and public audiences to how important biodiversity conservation is at the moment on a global scale. Furthermore, we are contributing our knowledge and data with government and non-government organizations for their activities (Ex: National Red List) in conservation. We provide clay bottles for clients to bring a message and reduce plastic usage. At the end, we bring our conservation message to our clients during their tours and let them understand how important biodiversity conservation and eco-friendly tourism is on the planet.
                                 </p>
                             </div>
                         </div>
@@ -182,17 +182,13 @@ const Home = () => {
                                         </CardHeader>
                                         <CardContent className=" pb-24">
                                             <div className=""></div>
-                                            <p className="indent-10 text-justify regular-16 tracking-wide leading-relaxed pb-5">
+                                            <p className="indent-10 line-clamp-6 text-justify regular-16 tracking-wide leading-relaxed">
                                                 {props.description}
                                             </p>
                                         </CardContent>
                                         <CardFooter className="flex flex-col absolute inset-x-0 bottom-0">
-                                            <div className=" border w-full m-0 p-0 border-gray"></div>
-                                            <Link to={"/contact_us"} className="mt-5 cursor-pointer">
-                                                <p className=" bold-18 hover:text-primary transition-all duration-200">
-                                                    Contact us
-                                                </p>
-                                            </Link>
+                                            <div className=' border w-full m-0 p-0 border-gray'></div>
+                                            <Link to={`/tours/${props.title}`} className='mt-5 cursor-pointer'><p className=' bold-18 hover:text-primary transition-all duration-200'>View</p></Link>
                                         </CardFooter>
                                     </Card>
                                 ))}
@@ -390,7 +386,7 @@ const Home = () => {
                                                     </div>
                                                 </div>
 
-                                                <button className='bg-green-500 text-white px-10 py-4 rounded-full hover:bg-emerald-500 transition-all duration-200 hover:shadow-lg hover:shadow-green-500'>Add Your Review</button>
+                                                <button className='bg-primary text-white px-10 py-4 rounded-full hover:bg-primary2 transition-all duration-200 hover:shadow-lg hover:shadow-primary2'>Add Your Review</button>
 
                                             </div>
                                         </DialogDescription>

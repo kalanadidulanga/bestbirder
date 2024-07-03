@@ -46,7 +46,7 @@ const Gallery = () => {
     <>
       {/* <Navbar /> */}
 
-      <PageHeader name="Gallery"/>
+      <PageHeader name="Gallery" image={"/images/birds/3.JPG"}/>
 
       <section className="w-full overflow-hidden bg-white">
         <div className=" w-full   bg-cover bg-center  py-24">

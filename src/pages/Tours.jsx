@@ -15,7 +15,7 @@ const Tours = () => {
     <>
       {/* <Navbar /> */}
 
-      <PageHeader name="Tours" />
+      <PageHeader name="Tours" image={"/images/birds/1.jpg"}/>
 
       <section className=' w-full h-auto overflow-hidden'>
         <div className='bg-tour bg-cover bg-center w-full'>
@@ -34,12 +34,12 @@ const Tours = () => {
                       </div>
                     </CardHeader>
                     <CardContent className=" pb-24">
-                      <div className=''></div>
-                      <p className='indent-10 text-justify regular-16 tracking-wide leading-relaxed pb-5'>{props.description}</p>
+                      {/* <div className=''></div> */}
+                      <p className='indent-10 line-clamp-6 text-justify regular-16 tracking-wide leading-relaxed'>{props.description}</p>
                     </CardContent>
                     <CardFooter className="flex flex-col absolute inset-x-0 bottom-0">
                       <div className=' border w-full m-0 p-0 border-gray'></div>
-                      <Link to={"/contact_us"} className='mt-5 cursor-pointer'><p className=' bold-18 hover:text-primary transition-all duration-200'>Contact us</p></Link>
+                      <Link to={`/tours/${props.title}`} className='mt-5 cursor-pointer'><p className=' bold-18 hover:text-primary transition-all duration-200'>View</p></Link>
                     </CardFooter>
                   </Card>
                 ))}

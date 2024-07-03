@@ -20,6 +20,7 @@ import AllReviews from "./pages/AllReviews";
 import Login from "./pages/adminPages/Login";
 import Dashboard from "./pages/adminPages/Dashboard";
 import ClientLayout from "./layouts/ClientLayout";
+import SingleTour from "./pages/SingleTour";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/tours" element={<Tours />} />
+          <Route path="/tours/:tour" element={<SingleTour />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/policy" element={<Policy />} />
           <Route path="/contact_us" element={<ContactUs />} />

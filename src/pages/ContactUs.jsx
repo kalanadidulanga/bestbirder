@@ -45,7 +45,7 @@ const ContactUs = () => {
 
       {/* <Navbar /> */}
 
-      <PageHeader name="Contact Us" />
+      <PageHeader name="Contact Us" image={"/images/birds/7.jpg"}/>
 
       <section className=' w-full h-auto overflow-hidden'>
         <div className=' bg-cover bg-center w-full'>

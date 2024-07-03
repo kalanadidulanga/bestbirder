@@ -17,7 +17,7 @@ const AllReviews = () => {
             <div className=' max-container padding-container py-24'>
                 <div className=' flex flex-col'>
                     <div className=" flex flex-col gap-3 w-full h-auto items-center pb-10">
-                        <h1 className=" text-5xl md:text-6xl font-bold text-center text-emerald-500">All Reviews</h1>
+                        <h1 className=" text-5xl md:text-6xl font-bold text-center text-primary">All Reviews</h1>
                         <p className=" text-sm text-gray-700 text-center">All of your reviews have a personal touch</p>
                     </div>
 

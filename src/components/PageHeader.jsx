@@ -3,19 +3,22 @@ import { FaHome } from 'react-icons/fa'
 import { IoIosArrowForward } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 
-const PageHeader = ({ name }) => {
+const PageHeader = ({ name,image }) => {
     return (
         <>
-            <section className=' bg-banner1 bg-cover bg-center'>
-                <div className=' bg-black/30'>
-                    <div className=' max-container padding-contaoner py-24 overflow-hidden'>
-                        <div className=' flex flex-col items-center justify-center gap-4'>
-                            <h2 className=' text-white text-4xl md:text-6xl font-bold tracking-wide'>{name}</h2>
-                            <div className=' flex items-center gap-3'>
-                                <div className=' bg-primary rounded-full p-3 flex justify-center items-center'><FaHome color='white' size={20} /></div>
-                                <Link to={'/'} className=' text-white regular-18 cursor-pointer hover:underline'>Home</Link>
-                                <IoIosArrowForward color='white' size={25} />
-                                <p className=' text-white regular-18'>{name}</p>
+            <section className=' bg-banner1 bg-cover bg-center '>
+                <div className=' bg-black/30 relative w-full h-auto flex flex-col overflow-hidden'>
+                    <img src={image} alt="" className=' absolute z-0 w-full h-full object-cover object-top' />
+                    <div className=' w-full h-full bg-black/30 z-50'>
+                        <div className=' max-container padding-contaoner py-14 md:py-16 lg:py-20 overflow-hidden z-50'>
+                            <div className=' flex flex-col items-center justify-center gap-4'>
+                                <h2 className=' text-white text-center text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide'>{name}</h2>
+                                <div className=' flex items-center gap-3'>
+                                    <div className=' bg-primary rounded-full p-2 flex justify-center items-center'><FaHome color='white' size={15} /></div>
+                                    <Link to={'/'} className=' text-white text-lg md:text-xl lg:text-2xl cursor-pointer hover:underline'>Home</Link>
+                                    <IoIosArrowForward color='white' size={25} />
+                                    <p className=' text-white text-lg md:text-xl lg:text-2xl text-center'>{name}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
