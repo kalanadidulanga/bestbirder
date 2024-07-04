@@ -64,7 +64,7 @@ const AuthProvider = ({ children }) => {
         Cookies.set('user_id', userData.id, { expires: 1 });
         localStorage.setItem('userData', JSON.stringify(userData));
         // if (userData.user_type_id === "2") {
-        navigate('/dashboard');
+        navigate('/admin');
         // } else if (userData.user_type_id === "1") {
         // navigate('/');
         // }

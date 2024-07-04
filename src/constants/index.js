@@ -11,6 +11,13 @@ export const NAV_LINKS = [
     { href: '/locations', key: 'locations', label: 'Locations' },
 ];
 
+export const ADMIN_NAV_LINKS = [
+    { href: '/admin', key: 'dashboard', label: 'Dashboard' },
+    { href: '/admin/reviews', key: 'reviews', label: 'Reviews' },
+    { href: '/admin/gallery', key: 'gallery', label: 'Gallery' },
+    { href: '/admin/profile', key: 'profile', label: 'Profile' },
+];
+
 export const HOME_CAROUSEL = [
 
     {

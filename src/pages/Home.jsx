@@ -8,7 +8,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
-import { HOME_CAROUSEL, REVIEWS, TOURS_HOME } from "@/constants";
+import { BACKEND_URL, HOME_CAROUSEL, REVIEWS, TOURS_HOME } from "@/constants";
 import Autoplay from "embla-carousel-autoplay";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -51,6 +51,8 @@ import {
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import GoToTop from "@/components/GoToTop";
+import toast from "react-hot-toast";
+import axios from "axios";
 
 
 const Home = () => {
@@ -61,14 +63,54 @@ const Home = () => {
     );
 
     const onInit = () => {
-        console.log("lightGallery has been initialized");
+        // console.log("lightGallery has been initialized");
     };
 
     const [rating, setRating] = useState(null);
     const [hover, setHover] = useState(null);
+    const [fname, setFname] = useState("");
+    const [lname, setLname] = useState("");
+    const [review, setReview] = useState("");
+
+    const [isReviewOpen, setIsReviewOpen] = useState(false);
+
+    const handleReviewSubmtion = async () => {
+        let payload = {
+            fname: fname,
+            lname: lname,
+            review: review,
+            stars: rating
+        }
+
+        //check the all above field are not empty
+        // if (!fname || !lname || !review || !rating) {
+        //     toast.error('Please fill all the fields');
+        //     return
+        // }
+
+        try {
+            const response = await axios.post(`${BACKEND_URL}/add-review.php`, payload);
+
+            if(response.data.success) {
+                toast.success(response.data.message);
+                setFname("");
+                setLname("");
+                setReview("");
+                setRating(null);
+                setIsReviewOpen(false);
+            }else {
+                toast.error(response.data.message);
+            }
+
+        } catch (error) {
+            console.error('There was an error adding the review!', error);
+        }
+
+        // console.log(payload);
+    };
 
     useEffect(() => {
-        console.log('test');
+        // console.log('test');
     }, []);
 
     return (
@@ -325,7 +367,7 @@ const Home = () => {
 
                             <Link to={'/all_reviews'} className=' bg-primary text-white px-10 py-4 rounded-full hover:bg-primary2 transition-all duration-200 hover:shadow-lg hover:shadow-primary2 w-full max-w-56 text-center'>All Reviews</Link>
 
-                            <Dialog>
+                            <Dialog open={isReviewOpen} onOpenChange={setIsReviewOpen}>
                                 {/* <div className=' w-full flex items-center justify-center'> */}
                                 <DialogTrigger className=' bg-primary2 text-white px-10 py-4 rounded-full hover:bg-primary transition-all duration-200 hover:shadow-lg hover:shadow-primary w-full max-w-56 text-center'>Add Your Review</DialogTrigger>
                                 {/* </div> */}
@@ -360,19 +402,19 @@ const Home = () => {
                                                             )
                                                         })}
                                                     </div>
-                                                    <p className=' text-sm text-start text-yellow-500'>Your Rating is <span className=' font-bold'>{rating}</span></p>
+                                                    <div className=' text-sm text-start text-yellow-500'>Your Rating is <span className=' font-bold'>{rating}</span></div>
                                                 </div>
                                                 <div className=" flex flex-col gap-3 md:flex-row w-full">
                                                     <div className=' flex flex-col gap-2 w-full'>
                                                         <label htmlFor="fname" className=' text-sm text-start'>First Name</label>
                                                         <div className=' flex w-full h-auto shadow-lg overflow-hidden rounded-xl border-2 items-center justify-center'>
-                                                            <input type="text" name="fname" id="fname" className=' w-full focus:outline-none py-3 px-2 bg-[#F4FEFF]'></input>
+                                                            <input value={fname} onChange={(e) => setFname(e.target.value)} type="text" name="fname" id="fname" className=' w-full focus:outline-none py-3 px-2 bg-[#F4FEFF]'></input>
                                                         </div>
                                                     </div>
                                                     <div className=' flex flex-col gap-2 w-full'>
                                                         <label htmlFor="lname" className=' text-sm text-start'>Last Name</label>
                                                         <div className=' flex w-full h-auto shadow-lg overflow-hidden rounded-xl border-2 items-center justify-center'>
-                                                            <input type="text" name="lname" id="lname" className=' w-full focus:outline-none py-3 px-2 bg-[#F4FEFF]'></input>
+                                                            <input value={lname} onChange={(e) => setLname(e.target.value)} type="text" name="lname" id="lname" className=' w-full focus:outline-none py-3 px-2 bg-[#F4FEFF]'></input>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -382,11 +424,11 @@ const Home = () => {
                                                         <p className=" text-sm text-red-500">Max words 50 *</p>
                                                     </div>
                                                     <div className=' flex w-full h-auto shadow-xl overflow-hidden rounded-xl border-2 items-center justify-center'>
-                                                        <textarea name="review" id="review" className=' w-full focus:outline-none py-2 px-2 bg-[#F4FEFF]' rows={5}></textarea>
+                                                        <textarea value={review} onChange={(e) => setReview(e.target.value)} name="review" id="review" className=' w-full focus:outline-none py-2 px-2 bg-[#F4FEFF]' rows={5}></textarea>
                                                     </div>
                                                 </div>
 
-                                                <button className='bg-primary text-white px-10 py-4 rounded-full hover:bg-primary2 transition-all duration-200 hover:shadow-lg hover:shadow-primary2'>Add Your Review</button>
+                                                <Button onClick={handleReviewSubmtion} className='bg-primary text-white px-10 py-4 rounded-full hover:bg-primary2 transition-all duration-200 hover:shadow-lg hover:shadow-primary2'>Add Your Review</Button>
 
                                             </div>
                                         </DialogDescription>

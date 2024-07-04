@@ -6,16 +6,12 @@ import { IoClose } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleNavbar = () => {
-        setIsOpen(!isOpen);
-    }
-
+    
     return (
         <>
-            <DashboardNav/>
+            <div>
+                dashboard
+            </div>
         </>
     )
 }

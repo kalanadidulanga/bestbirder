@@ -22,6 +22,10 @@ import Dashboard from "./pages/adminPages/Dashboard";
 import ClientLayout from "./layouts/ClientLayout";
 import SingleTour from "./pages/SingleTour";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AdminLayout from "./layouts/AdminLayout";
+import Reviews from "./pages/adminPages/Reviews";
+import AdminGallery from "./pages/adminPages/Gallery";
+import Profile from "./pages/adminPages/Profile";
 
 function App() {
 
@@ -44,8 +48,14 @@ function App() {
         </Route>
 
         <Route path="/login" element={<Login />} />
-        <Route element={<ProtectedRoute />}>
-          <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route element={<ProtectedRoute />}>
+            <Route index element={<Dashboard />} />
+            <Route path="reviews" element={<Reviews />} />
+            <Route path="gallery" element={<AdminGallery />} />
+            <Route path="profile" element={<Profile />} />
+          </Route>
         </Route>
       </Routes>
 
