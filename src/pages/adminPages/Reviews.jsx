@@ -21,6 +21,7 @@ const Reviews = () => {
 
   const [key, setkey] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoading2, setIsLoading2] = useState(false);
   const [dataSet, setDataSet] = useState([]);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,7 +32,7 @@ const Reviews = () => {
 
   useEffect(() => {
     const loadReviews = async () => {
-      setIsLoading(true);
+      setIsLoading2(true);
       try {
         const response = await axios.get(`${BACKEND_URL}/get-reviews.php`);
         if (response.data.success) {
@@ -43,12 +44,54 @@ const Reviews = () => {
       } catch (error) {
         toast.error('Error fetching reviews:', error);
       } finally {
-        setIsLoading(false);
+        setIsLoading2(false);
       }
     }
 
     loadReviews()
   }, [key])
+
+  const rejectReview = async (id) => {
+    setIsLoading(true);
+    try {
+      const response = await axios.get(`${BACKEND_URL}/reject-review.php`, {
+        params: { id }
+      });
+
+      if (response?.data?.success) {
+        toast.success(response.data.message);
+        setkey(!key);
+      } else {
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      console.error('Error updating review status:', error);
+      return { success: false, message: error.message };
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  const acceptReview = async (id) => {
+    setIsLoading(true);
+    try {
+      const response = await axios.get(`${BACKEND_URL}/accept-review.php`, {
+        params: { id }
+      });
+
+      if (response?.data?.success) {
+        toast.success(response.data.message);
+        setkey(!key);
+      } else {
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      console.error('Error updating review status:', error);
+      return { success: false, message: error.message };
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   return (
     <>
@@ -59,7 +102,7 @@ const Reviews = () => {
             <h4 className=' text-xl font-semibold'>All Reviews</h4>
           </div>
           {/* table */}
-          <div className='border rounded-md overflow-hidden'>
+          <div className='border rounded-md overflow-hidden relative'>
             <Table>
               {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
               <TableHeader>
@@ -82,20 +125,20 @@ const Reviews = () => {
                     <TableCell className="text-nowrap">{review.lname}</TableCell>
                     <TableCell>{review.review}</TableCell>
                     <TableCell className="text-center">{review.stars}</TableCell>
-                    <TableCell className="text-nowrap">{review.status === 0 && 'Rejected or Deleted' || review.status === 1 && 'Pending' || review.status >= 2 && 'Approved'}</TableCell>
+                    <TableCell className={`text-nowrap ${review.status == 0 && 'text-destructive' || review.status == 1 && 'text-primary' || review.status >= 2 && 'text-green-500'}`}>{review.status == 0 && 'Rejected or Deleted' || review.status == 1 && 'Pending' || review.status >= 2 && 'Approved'}</TableCell>
                     <TableCell className="text-nowrap">2024-03-24</TableCell>
                     <TableCell className="text-right justify-end flex gap-2 flex-nowrap">
 
-                      {(review.status === 1 || review.status === 0) && (
+                      {(review.status == 1 || review.status == 0) && (
                         <>
-                          <Button className="w-10 h-10 p-1" variant="outline" onClick={() => { }}>
+                          <Button disabled={isLoading} className="w-10 h-10 p-1 hover:text-primary2" variant="outline" onClick={() => { acceptReview(review.id) }}>
                             <Check size={18} />
                           </Button>
                         </>
                       )}
 
-                      {(review.status === 1 || review.status === 2) && (
-                        <Button className="w-10 h-10 p-1" variant="outline" onClick={() => { }}>
+                      {(review.status == 1 || review.status == 2) && (
+                        <Button disabled={isLoading} className="w-10 h-10 p-1 hover:text-destructive" variant="outline" onClick={() => { rejectReview(review.id) }}>
                           <X size={18} />
                         </Button>
                       )}
@@ -106,8 +149,14 @@ const Reviews = () => {
               </TableBody>
             </Table>
 
+            {isLoading2 && (
+              <Loading className={"h-[10vh]"} />
+            )}
+
             {isLoading && (
-              <Loading />
+              <div className=' z-50 w-full min-h-[30vh] h-full bg-black/20 absolute flex justify-center items-center top-0'>
+                <Loading className={"h-[10vh]"} />
+              </div>
             )}
           </div>
 

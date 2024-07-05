@@ -104,7 +104,7 @@ const Login = () => {
                                     </p>
                                 </div>
 
-                                <Button disabled={isLoading} onClick={() => handleLogin(dataSet.email, dataSet.password)} variant='default' size='auto' className='mt-5 w-full max-w-sm'>LOGIN</Button>
+                                <Button disabled={isLoading} onClick={() => handleLogin(dataSet.email, dataSet.password)} variant='default' size='auto' className='mt-5 py-3 w-full max-w-sm'>LOGIN</Button>
 
                             </div>
                         </div>

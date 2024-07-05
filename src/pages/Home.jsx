@@ -53,6 +53,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import GoToTop from "@/components/GoToTop";
 import toast from "react-hot-toast";
 import axios from "axios";
+import PaginationSection from "@/components/PaginationSection";
+import Loading from "@/components/Loading";
 
 
 const Home = () => {
@@ -74,7 +76,40 @@ const Home = () => {
 
     const [isReviewOpen, setIsReviewOpen] = useState(false);
 
+    const [isLoading, setIsLoading] = useState(false);
+
+    const [key, setkey] = useState(true);
+    const [isLoading2, setIsLoading2] = useState(false);
+    const [dataSet, setDataSet] = useState([]);
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage, setPostsPerPage] = useState(6);
+    const lastPostIndex = currentPage * postsPerPage;
+    const firstPostIndex = lastPostIndex - postsPerPage;
+    const currentDataSet = dataSet.slice(firstPostIndex, lastPostIndex);
+
+    useEffect(() => {
+        const loadReviews = async () => {
+            setIsLoading2(true);
+            try {
+                const response = await axios.get(`${BACKEND_URL}/get-reviews-client.php`);
+                if (response.data.success) {
+                    setDataSet(response.data.data);
+                } else {
+                    toast.error(response.data.message || 'Error fetching reviews');
+                }
+            } catch (error) {
+                toast.error('Error fetching reviews:', error);
+            } finally {
+                setIsLoading2(false);
+            }
+        }
+
+        loadReviews()
+    }, [key])
+
     const handleReviewSubmtion = async () => {
+        setIsLoading(true);
         let payload = {
             fname: fname,
             lname: lname,
@@ -82,36 +117,35 @@ const Home = () => {
             stars: rating
         }
 
-        //check the all above field are not empty
-        // if (!fname || !lname || !review || !rating) {
-        //     toast.error('Please fill all the fields');
-        //     return
-        // }
+        if (!fname || !lname || !review || !rating) {
+            toast.error('Please fill all the fields');
+            return
+        }
 
         try {
             const response = await axios.post(`${BACKEND_URL}/add-review.php`, payload);
 
-            if(response.data.success) {
+            if (response.data.success) {
                 toast.success(response.data.message);
                 setFname("");
                 setLname("");
                 setReview("");
                 setRating(null);
                 setIsReviewOpen(false);
-            }else {
+                setkey(!key);
+            } else {
                 toast.error(response.data.message);
             }
 
         } catch (error) {
             console.error('There was an error adding the review!', error);
+        } finally {
+            setIsLoading(false);
         }
 
         // console.log(payload);
     };
 
-    useEffect(() => {
-        // console.log('test');
-    }, []);
 
     return (
         <>
@@ -330,37 +364,50 @@ const Home = () => {
                             <p className=" text-sm text-gray-700 text-center">All of your reviews have a personal touch</p>
                         </div>
 
+                        {isLoading2 && (
+                            <Loading className={" h-[20vh]"}/>
+                        )}
+                        
+
                         <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
 
-                            {REVIEWS.map((review, index) => (
+                            {currentDataSet?.map((review, index) => (
                                 <div className=' w-full flex flex-col gap-5' key={index}>
                                     <div className=' flex justify-between w-full'>
                                         <div className=' flex gap-2 w-full overflow-hidden items-center'>
-                                            <div className=' w-14 h-14 rounded-full overflow-hidden flex justify-center items-center'>
+                                            {/* <div className=' w-14 h-14 rounded-full overflow-hidden flex justify-center items-center'>
                                                 <Avatar>
                                                     <AvatarImage src={review.img} />
-                                                    <AvatarFallback>{review.name.slice(0, 2)}</AvatarFallback>
+                                                    <AvatarFallback>{review.fname?.slice(0, 1)}{review.lname?.slice(0, 1)}</AvatarFallback>
                                                 </Avatar>
-
-                                            </div>
+                                            </div> */}
 
                                             <div className=' flex flex-col items-start w-auto justify-center'>
-                                                <h5 className=' text-lg font-bold'>{review.name}</h5>
+                                                <h5 className=' text-lg font-bold'>{review.fname}{" "}{review.lname}</h5>
                                                 {/* <p className='text-sm font-normal'>{review.role}</p> */}
                                             </div>
                                         </div>
                                         <div className='flex flex-row justify-center items-center w-[86px]'>
-                                            <StarRate rate={review.rate} />
+                                            <StarRate rate={review.stars} />
                                         </div>
                                     </div>
                                     <div className=" w-full overflow-hidden flex">
                                         <p className=' text-sm'>
-                                            {review.description}
+                                            {review.review}
                                         </p>
                                     </div>
                                 </div>
                             ))}
 
+                        </div>
+
+                        <div className=" flex justify-center mt-5">
+                            <PaginationSection
+                                totalPosts={dataSet.length}
+                                postsPerPage={postsPerPage}
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
                         </div>
 
                         <div className=" flex flex-col justify-center items-center md:flex-row  w-full mt-10 gap-5">
@@ -428,7 +475,7 @@ const Home = () => {
                                                     </div>
                                                 </div>
 
-                                                <Button onClick={handleReviewSubmtion} className='bg-primary text-white px-10 py-4 rounded-full hover:bg-primary2 transition-all duration-200 hover:shadow-lg hover:shadow-primary2'>Add Your Review</Button>
+                                                <Button disabled={!fname || !lname || !review || !rating || rating === 0 || isLoading} onClick={handleReviewSubmtion} className='bg-primary text-white px-10 py-4 rounded-full hover:bg-primary2 transition-all duration-200 hover:shadow-lg hover:shadow-primary2'>Add Your Review</Button>
 
                                             </div>
                                         </DialogDescription>
