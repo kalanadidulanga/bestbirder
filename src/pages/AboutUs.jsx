@@ -17,7 +17,7 @@ const AboutUs = () => {
     <>
       {/* <Navbar /> */}
 
-      <PageHeader name="About Us" image={"/images/birds/2.JPG"} />
+      <PageHeader name="About Us" image={"/images/others/1.jpg"} className={"object-center"}/>
 
       <section className=" w-full h-auto overflow-hidden">
         <div className="bg-image5 bg-cover bg-bottom w-full">

@@ -15,7 +15,7 @@ const Tours = () => {
     <>
       {/* <Navbar /> */}
 
-      <PageHeader name="Tours" image={"/images/birds/1.jpg"}/>
+      <PageHeader name="Tours" image={"/images/others/2.jpg"} className={" object-center"}/>
 
       <section className=' w-full h-auto overflow-hidden'>
         <div className='bg-tour bg-cover bg-center w-full'>
