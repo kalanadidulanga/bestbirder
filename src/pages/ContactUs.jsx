@@ -3,41 +3,80 @@ import Navbar from '@/components/Navbar'
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { FaHome } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
 import { MdConnectWithoutContact } from "react-icons/md";
 import emailjs from '@emailjs/browser';
-
-import { useToast } from "@/components/ui/use-toast"
 import PageHeader from '@/components/PageHeader';
-import { SOCIALS } from '@/constants';
+import { BACKEND_URL, SOCIALS } from '@/constants';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const ContactUs = () => {
 
+  const [loading, setLoading] = useState(false)
+  const [mailBody, setMailBody] = useState({
+    name: "",
+    email: "",
+    country: "",
+    mobile: "",
+    arrivalDate: "",
+    depatureDate: "",
+    message: "",
+  })
+
   const form = useRef();
-  const { toast } = useToast()
 
-  const sendEmail = (e) => {
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs.sendForm('service_c5jmh2o', 'template_zo066ky', form.current, 'qwo2mflylR5fpOk4r')
+  //     .then((result) => {
+  //       console.log(result.text);
+  //       toast({
+  //         title: "Success",
+  //         description: "Mail Send Successfully...",
+  //       })
+  //     }, (error) => {
+  //       console.log(error.text);
+  //       toast({
+  //         variant: "destructive",
+  //         title: "Error",
+  //         description: "Somethings went wrong...",
+  //       })
+  //     });
+  // };
+
+  const sendEmail = async (e) => {
     e.preventDefault();
+    setLoading(true)
 
-    emailjs.sendForm('service_c5jmh2o', 'template_zo066ky', form.current, 'qwo2mflylR5fpOk4r')
-      .then((result) => {
-        console.log(result.text);
-        toast({
-          title: "Success",
-          description: "Mail Send Successfully...",
+    // console.log(mailBody);
+
+    try {
+      const response = await axios.post(`${BACKEND_URL}/contact.php`, mailBody)
+      if (response.data.success) {
+        toast.success(response.data.message)
+        setMailBody({
+          name: "",
+          email: "",
+          country: "",
+          mobile: "",
+          arrivalDate: "",
+          depatureDate: "",
+          message: "",
         })
-      }, (error) => {
-        console.log(error.text);
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description: "Somethings went wrong...",
-        })
-      });
+      } else {
+        toast.error(response.data.message)
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false)
+    }
   };
 
   return (
@@ -45,7 +84,7 @@ const ContactUs = () => {
 
       {/* <Navbar /> */}
 
-      <PageHeader name="Contact Us" image={"/images/others/7.jpg"} className={"object-center"}/>
+      <PageHeader name="Contact Us" image={"/images/others/7.jpg"} className={"object-center"} />
 
       <section className=' w-full h-auto overflow-hidden'>
         <div className=' bg-cover bg-center w-full'>
@@ -59,47 +98,53 @@ const ContactUs = () => {
               <div className=' flex flex-col md:flex-row gap-5 w-full'>
                 <div className="grid w-full max-w-2xl items-center gap-1.5">
                   <label htmlFor="name" className='medium-18'>Name</label>
-                  <Input type="text" id="name" placeholder="Name" className=" " name="from_name" />
+                  <Input value={mailBody.name} onChange={(e) => setMailBody((prev) => ({ ...prev, name: e.target.value }))} type="text" id="name" placeholder="Name" className=" " name="from_name" />
                 </div>
 
                 <div className="grid w-full max-w-2xl items-center gap-1.5">
                   <label htmlFor="country" className='medium-18'>Country</label>
-                  <Input type="text" id="country" placeholder="Country" className=" " name="country" />
+                  <Input value={mailBody.country} onChange={(e) => setMailBody((prev) => ({ ...prev, country: e.target.value }))} type="text" id="country" placeholder="Country" className=" " name="country" />
                 </div>
               </div>
 
               <div className=' flex flex-col md:flex-row gap-5 w-full'>
                 <div className="grid w-full max-w-2xl items-center gap-1.5">
                   <label htmlFor="email" className='medium-18'>Email</label>
-                  <Input type="email" id="email" placeholder="Email" className=" " name="email" />
+                  <Input value={mailBody.email} onChange={(e) => setMailBody((prev) => ({ ...prev, email: e.target.value }))} type="email" id="email" placeholder="Email" className=" " name="email" />
                 </div>
 
                 <div className="grid w-full max-w-2xl items-center gap-1.5">
                   <label htmlFor="mobile" className='medium-18'>Mobile</label>
-                  <Input type="text" id="mobile" placeholder="Mobile" className=" " name="mobile" />
+                  <Input value={mailBody.mobile} onChange={(e) => setMailBody((prev) => ({ ...prev, mobile: e.target.value }))} type="text" id="mobile" placeholder="Mobile" className=" " name="mobile" />
                 </div>
               </div>
 
               <div className=' flex flex-col md:flex-row gap-5 w-full'>
                 <div className="grid w-full max-w-2xl items-center gap-1.5">
                   <label htmlFor="arival" className='medium-18'>Arival Date</label>
-                  <Input type="date" id="arival" placeholder="Arival Date" className=" py-2" name="arival" />
+                  <Input value={mailBody.arrivalDate} onChange={(e) => setMailBody((prev) => ({ ...prev, arrivalDate: e.target.value }))} type="date" id="arival" placeholder="Arival Date" className=" py-2" name="arival" />
                 </div>
 
                 <div className="grid w-full max-w-2xl items-center gap-1.5">
                   <label htmlFor="depature" className='medium-18'>Depature Date</label>
-                  <Input type="date" id="depature" placeholder="Depature Date" className=" py-2" name="depature" />
+                  <Input value={mailBody.depatureDate} onChange={(e) => setMailBody((prev) => ({ ...prev, depatureDate: e.target.value }))} type="date" id="depature" placeholder="Depature Date" className=" py-2" name="depature" />
                 </div>
               </div>
 
               <div className="grid w-full max-w-4xl items-center gap-1.5">
                 <label htmlFor="msg" className='medium-18'>Message</label>
-                <Textarea type="msg" id="msg" placeholder="Your Message" className=" " name="message" />
+                <Textarea value={mailBody.message} onChange={(e) => setMailBody((prev) => ({ ...prev, message: e.target.value }))} type="msg" id="msg" placeholder="Your Message" className=" " name="message" />
               </div>
 
-              <Button asChild type="submit" onClick={sendEmail} className=" cursor-pointer w-[180px] mt-10 py-7 bg-primary2 hover:bg-primary text-white rounded-xl text-lg hover:shadow-lg hover:shadow-primary/50 transition-all duration-200" size={"lg"}>
-                <label className="">Send Message</label>
-              </Button>
+              {loading ? (
+                <Button asChild disabled={loading} variant="secondary" size={"lg"}>
+                  <label className="">Sending...</label>
+                </Button>
+              ) : (
+                <Button asChild disabled={loading} type="submit" onClick={sendEmail} className=" cursor-pointer w-[180px] mt-10 py-7 bg-primary2 hover:bg-primary text-white rounded-xl text-lg hover:shadow-lg hover:shadow-primary/50 transition-all duration-200" size={"lg"}>
+                  <label className="">{loading ? "Sending..." : "Send Message"}</label>
+                </Button>
+              )}
 
 
             </form>
