@@ -9,7 +9,7 @@ import { BACKEND_URL } from '@/constants';
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : null);
+    const [user, setUser] = useState(localStorage.getItem('userData') && Cookies.get('auth_token') ? JSON.parse(localStorage.getItem('userData')) : null);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -54,7 +54,10 @@ const AuthProvider = ({ children }) => {
 
             handleAuth();
         } else {
-            // navigate('/login');
+            setUser(null);
+            Cookies.remove('auth_token');
+            Cookies.remove('user_id');
+            localStorage.clear();
         }
     }, []);
 

@@ -529,9 +529,9 @@ const Home = () => {
             </section>
 
             <section className="w-full flexCenter overflow-hidden bg-banner4 bg-cover bg-top">
-                <div className=" bg-primary2/30 w-full h-full">
+                <div className=" bg-primary2/50 w-full h-full">
                     <div className="max-container padding-container h-full py-24">
-                        <div className=" flex flex-col gap-2 lg:gap-4">
+                        <div className=" flex flex-col gap-2 lg:gap-4 max-w-[900px]">
                             <h1
                                 className="bold-32 lg:bold-40 mb-3 lg:mb-7 text-primary"
                             // style={{ textShadow: "0px 0px 5px blue" }}

@@ -40,8 +40,8 @@ const BestLocations = () => {
                   <h4 className=" bold-18 md:bold-20 lg:bold-32 mb-2 lg:mb-4 text-primary">
                     Anawilundawa Ramsar Wetland
                   </h4>
-                  <div className=" flex items-center justify-center rounded-md overflow-hidden max-h-[375px] mb-3">
-                    <img src="https://www.srilankaecotourism.lk/location_img/1489646824Anawilundawa_4.JPG" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
+                  <div className=" flex items-start justify-center rounded-md overflow-hidden max-h-[375px] mb-3">
+                    <img src="/images/locations/anawilundawa.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
                   </div>
                   <p className=" indent-10 max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                     Anawilundawa wetland is located in Puttlam District in North
@@ -61,7 +61,7 @@ const BestLocations = () => {
                     Wilpattu National Park
                   </h4>
                   <div className=" flex items-center justify-center rounded-md overflow-hidden max-h-[375px] mb-3">
-                    <img src="https://www.ccf.gov.lk/wp-content/uploads/2022/08/02.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
+                    <img src="/images/locations/wilpattubear.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
                   </div>
                   <p className=" indent-10 max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                     Wilpattu is the largest National Park in Sri Lanka. World
@@ -85,7 +85,7 @@ const BestLocations = () => {
                     Sigiriya Sanctuary
                   </h4>
                   <div className=" flex items-center justify-center rounded-md overflow-hidden max-h-[375px] mb-3">
-                    <img src="https://cdn.getyourguide.com/img/tour/5896fa48ec1e0.jpeg/145.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
+                    <img src="/images/locations/sigiriya.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
                   </div>
                   <p className=" indent-10 max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                     Sigiriya is the 8<sup>th</sup> Wonder of the world (UNESCO world heritage
@@ -104,7 +104,7 @@ const BestLocations = () => {
                     Horton Plains National Park
                   </h4>
                   <div className=" flex items-center justify-center rounded-md overflow-hidden max-h-[375px] mb-3">
-                    <img src="https://www.bestoflanka.com/images/slider/best-things-to-do-in-sri-lanka/wildlife-safaris-sri-lanka/wildlife-safaris-horton-plains-national-park-sri-lanka/01.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
+                    <img src="/images/locations/hortonplains1.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
                   </div>
                   <p className=" indent-10 max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                     Located in the Nuwara Eliya District in Central Province of
@@ -124,7 +124,7 @@ const BestLocations = () => {
                     Makandawa Forest Reserve Kitulgala
                   </h4>
                   <div className=" flex items-center justify-center rounded-md overflow-hidden max-h-[375px] mb-3">
-                    <img src="https://ceylonpages.lk/wp-content/uploads/listing-uploads/gallery/2020/05/2-2-e1590499813276.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
+                    <img src="/images/locations/makandawakitulgala.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
                   </div>
                   <p className=" indent-10 max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                     Makandawa is a lowland rain forest, located in the Kegalle
@@ -142,7 +142,7 @@ const BestLocations = () => {
                     Sinharaja Rain Forest
                   </h4>
                   <div className=" flex items-center justify-center rounded-md overflow-hidden max-h-[375px] mb-3">
-                    <img src="https://www.bestoflanka.com/images/slider/best-things-to-do-in-sri-lanka/trekking-and-Hiking-in-sri-lanka/nature-exploration-sinharaja-rain-forest-sri-lanka/01.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
+                    <img src="/images/locations/sinharaja.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
                   </div>
                   <p className=" indent-10 max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                     Sinharaja man and biosphere lowland rainforest is located in
@@ -168,7 +168,7 @@ const BestLocations = () => {
                     Yala National Park
                   </h4>
                   <div className=" flex items-center justify-center rounded-md overflow-hidden max-h-[375px] mb-3">
-                    <img src="https://kimasurf.com/images/addons/header_57.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
+                    <img src="/images/locations/yala.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
                   </div>
                   <p className=" indent-10 max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                     Yala National Park is the second largest National Park in Sri
@@ -188,7 +188,7 @@ const BestLocations = () => {
                     Udawalawe National Park
                   </h4>
                   <div className=" flex items-center justify-center rounded-md overflow-hidden max-h-[375px] mb-3">
-                    <img src="https://udawalaweusafari.com/wp-content/uploads/2022/11/Udawalawe-National-Park-Safari-38.jpg.webp" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
+                    <img src="/images/locations/udawalawa.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
                   </div>
                   <p className=" indent-10 max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                     Udawalawa National Park is on the boundary of Uva and
@@ -208,7 +208,7 @@ const BestLocations = () => {
                     Bundala National Park
                   </h4>
                   <div className=" flex items-center justify-center rounded-md overflow-hidden max-h-[375px] mb-3">
-                    <img src="https://www.bestoflanka.com/images/slider/best-things-to-do-in-sri-lanka/wildlife-safaris-sri-lanka/wildlife-safaris-bundala-national-park-sri-lanka/01.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
+                    <img src="/images/locations/bundala.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
                   </div>
                   <p className=" max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                     Bundala National Park is located in the semi-arid zone of the
@@ -228,7 +228,7 @@ const BestLocations = () => {
                     Vankalai Sanctuary
                   </h4>
                   <div className=" flex items-center justify-center rounded-md overflow-hidden max-h-[375px] mb-3">
-                    <img src="https://lh3.googleusercontent.com/proxy/R6speWU7skKUqjgPaldg6JjehIV07wEQx18j0tX9p2eRyirILG9QbQea2_o4aRNHcvj1hqNV_gSccgZJKF47CdYWH2to4KVn-09qsXJwLc2epjqWL9LibkY0Isl8im9Sd2KavxVCQNpLHDQ" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
+                    <img src="/images/locations/wankalei.jpg" className=" w-full object-cover" alt="Anawilundawa Ramsar Wetland" />
                   </div>
                   <p className=" max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                     Vankalai bird sanctuary (4839 hectares) is located in Mannar
