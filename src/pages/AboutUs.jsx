@@ -184,7 +184,7 @@ const AboutUs = () => {
               Postal Address:
             </p>
             <p className=" max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide">
-              662/19, Muttettuwa Watta, Koongahagedara, Kuliyapiyiya, 60200, Sri
+              662/19, Muttettuwa Watta, Koongahagedara, Kuliyapitiya, 60200, Sri
               Lanka
             </p>
 

@@ -157,7 +157,7 @@ const ContactUs = () => {
           <div className=' flex flex-col py-24'>
             <h4 className=' bold-18 md:bold-20 lg:bold-32 mb-2 lg:mb-4 text-primary'>Contacts</h4>
             <p className=' max-w-4xl text-left bold-16 md:bold-18 lg:bold-20 tracking-wide'>Postal Address:</p>
-            <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide'>662/19, Muttettuwa Watta, Koongahagedara, Kuliyapiyiya, 60200, Sri Lanka</p>
+            <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide'>662/19, Muttettuwa Watta, Koongahagedara, Kuliyapitiya, 60200, Sri Lanka</p>
 
             <p className=' max-w-4xl text-left bold-16 md:bold-18 lg:bold-20 tracking-wide mt-5'>Email:</p>
             <p className=' max-w-4xl text-left regular-14 md:regular-16 lg:regular-18 tracking-wide'>info@bestbirdersl.com / bestbirdersl@gmail.com</p>

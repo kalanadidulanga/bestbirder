@@ -111,7 +111,7 @@ const Reviews = () => {
                   <TableHead className="text-nowrap">First Name</TableHead>
                   <TableHead className="text-nowrap">Last Name</TableHead>
                   <TableHead>Review</TableHead>
-                  <TableHead>Stars</TableHead>
+                  <TableHead className="text-center">Stars</TableHead>
                   <TableHead>Status</TableHead>
                   <TableHead>Date</TableHead>
                   <TableHead className="text-right">Actions</TableHead>

@@ -290,16 +290,20 @@ const Home = () => {
 
             <section className="w-full flexCenter overflow-hidden">
                 <div className=" bg-white w-full h-full">
-                    <div className="max-container padding-container h-full py-24">
-                        <div className=" flex flex-col gap-2 lg:gap-4">
+                    <div className="max-container padding-container h-full items-center flex flex-col py-24">
+                        <div className=" flex flex-col items-center gap-2 lg:gap-4 max-w-[1000px]">
                             <h1
-                                className="bold-32 lg:bold-40 mb-3 lg:mb-7 text-primary3"
+                                className="bold-32 lg:bold-40 text-primary3"
                             >
                                 Bird Migration
                             </h1>
 
+                            <div className=" w-full max-w-[800px] max-h-[400px] h-auto rounded-lg overflow-hidden shadow-lg flex justify-center items-end">
+                                <img src="/images/locations/birdmigration.jpg" alt=""  className="w-full h-full object-cover"/>
+                            </div>
+
                             <p
-                                className=" regular-14 lg:regular-18 text-gray-500 tracking-wide leading-relaxed text-justify indent-8 lg:indent-20"
+                                className=" mt-5 regular-14 lg:regular-18 text-gray-500 tracking-wide leading-relaxed text-justify indent-8 lg:indent-20"
 
                             >
                                 Migration is one of the most fascinating phenomena in nature, demonstrated by every major animal taxon, which maximizes survival and reproductive success through the utilization of key habitats, food sources and breeding grounds and the avoidance of adverse environmental conditions. Recent evidence is that every four billion migratory birds make short or long-distance migrations. Many species and large numbers of birds are annually moved to tropics along the East Asian flyway and the Central Asian flyway. Sri Lanka is one of the great destinations of migratory birds. There are three major migration routes to Sri Lanka.  Western route, Eastern route and Andaman route. They are moving along the Central Asian flyway to Sri Lanka and start their southward journey in mid-August and their departures begin in late march.
