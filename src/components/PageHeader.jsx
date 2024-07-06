@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const PageHeader = ({ name,image, className }) => {
     return (
         <>
-            <section className=' bg-banner1 bg-cover bg-center '>
+            <section className=' bg-primary2/20 bg-cover bg-center '>
                 <div className=' bg-black/30 relative w-full h-auto flex flex-col overflow-hidden'>
                     <img src={image} alt="" className={` ${className} absolute z-0 w-full h-full object-cover`} />
                     <div className=' w-full h-full bg-black/30 z-50'>

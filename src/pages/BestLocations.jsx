@@ -9,7 +9,7 @@ const BestLocations = () => {
     <>
       {/* <Navbar /> */}
 
-      <PageHeader name="Best Locations" image={"/images/birds/8.JPG"} className={"object-top"}/>
+      <PageHeader name="Best Locations" image={"/images/others/6.jpg"} className={"object-center"}/>
 
       <section className=" w-full h-auto overflow-hidden">
         <div className="bg-image5 bg-cover bg-bottom w-full">

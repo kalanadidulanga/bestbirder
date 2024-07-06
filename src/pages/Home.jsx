@@ -214,7 +214,7 @@ const Home = () => {
                 <div className=" w-full h-auto py-24 bg-primary2/20">
                     <div className="max-container padding-container w-full h-full">
                         <div className=" flex flex-col lg:flex-row gap-5 md:gap-8 lg:gap-10">
-                            <div className=" relative flex flex-col flex-1 items-center justify-center overflow-hidden rounded-lg w-full h-auto min-h-[600px] lg:min-w-[400px]">
+                            <div className=" relative flex flex-col flex-1 items-center justify-center overflow-hidden rounded-lg w-full h-auto lg:min-w-[400px]">
                                 {/* <div className=" w-full max-w-[350px] h-[70%] absolute top-0 right-0 rounded-lg overflow-hidden">
                                     <img src="/images/persons/conference_photo.jpg" alt="conference" className=" h-full object-cover w-full object-center" />
                                 </div> */}

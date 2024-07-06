@@ -71,7 +71,7 @@ const AboutUs = () => {
                   Mr. Indika Peabotuwage
                 </h5>
                 <p className=" max-w-4xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
-                Mr. Indika Peabotuwage is the founder of the Best Birder tour group in Sri Lanka. With nearly 15 years of experience, Indika has worked as a field biologist and ornithologist in South and East Asia. His academic pursuits focus on wildlife conservation and management at the Open University of Sri Lanka and the Postgraduate Institute of Archaeology, University of Kelaniya, Sri Lanka. Indika has also been affiliated with the Department of Botany at the University of Peradeniya, the Young Zoologist Association of Sri Lanka National Zoo, Xishuangbanna Tropical Botanical Garden of the Chinese Academy of Sciences, and the College of Forestry at Guangxi University in China. He possesses extensive knowledge and experience with tropical bird flocks, migratory birds, and flora in South and East Asia.
+                Mr. Indika Peabotuwage is the founder of the Best Birder tour group in Sri Lanka. With nearly 15 years of experience, Indika has worked as a field biologist and ornithologist in South and East Asia. His academic pursuits focus on wildlife conservation and management at the Open University of Sri Lanka and the Postgraduate Institute of Archaeology, University of Kelaniya, Sri Lanka. Indika has also been affiliated with the Department of Botany at the University of Peradeniya, the Young Zoologist Association of Sri Lanka, National Zoo, Xishuangbanna Tropical Botanical Garden of the Chinese Academy of Sciences and the College of Forestry at Guangxi University in China. He possesses extensive knowledge and experience with tropical bird flocks, migratory birds, and flora in South and East Asia.
                 </p>
               </div>
 
@@ -99,11 +99,11 @@ const AboutUs = () => {
               </div>
 
 
-              <h4 className=" font-bold text-xl md:text-2xl lg:text-3xl text-primary mt-10">
+              <h4 className=" font-bold text-center text-xl md:text-2xl lg:text-3xl text-primary mt-10">
                 Advisory Board
               </h4>
-              <div className=" flex-col lg:flex-row flex w-full h-auto gap-8 lg:gap-10">
-                <div className=" flex flex-col flex-1">
+              <div className=" flex-col lg:flex-row flex w-full items-center lg:items-start h-auto gap-8 lg:gap-10">
+                <div className=" flex text-center items-center flex-col flex-1">
                   <div className=" rounded-md shadow-xl max-w-[400px] max-h-[400px] overflow-hidden w-full h-auto grid place-items-center">
                     <img src="/images/persons/Aiwu.jpg" alt="aiwu" className=" w-full h-full object-cover" />
                   </div>
@@ -115,10 +115,10 @@ const AboutUs = () => {
                       College of Forestry
                     </p>
                     <p className=" text-muted-foreground">
-                      Behavioral and Community Ecology, Conservation Biology Group
+                      Behavioral and Community Ecology Conservation Biology Group
                     </p>
                     <p className=" text-muted-foreground">
-                      College of Forestry, Guangxi University
+                      Guangxi University
                     </p>
                     <p className=" text-muted-foreground">
                       Nanning, PR China.
@@ -126,7 +126,7 @@ const AboutUs = () => {
                   </div>
                 </div>
 
-                <div className=" flex flex-col flex-1">
+                <div className=" flex text-center items-center flex-col flex-1">
                   <div className=" rounded-md shadow-xl max-w-[400px] max-h-[400px] overflow-hidden w-full h-auto grid place-items-center">
                     <img src="/images/persons/Emileo.jpg" alt="Emileo" className=" w-full h-full object-cover" />
                   </div>
@@ -146,7 +146,7 @@ const AboutUs = () => {
                   </div>
                 </div>
 
-                <div className=" flex flex-col flex-1">
+                <div className=" flex text-center items-center flex-col flex-1">
                   <div className=" rounded-md shadow-xl max-w-[400px] max-h-[400px] overflow-hidden w-full h-auto grid place-items-center">
                     <img src="/images/persons/111.jpg" alt="Deppthi" className=" w-full h-full object-cover" />
                   </div>
