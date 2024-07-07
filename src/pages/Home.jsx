@@ -210,30 +210,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className=" w-full h-auto overflow-hidden">
-                <div className=" w-full h-auto py-24 bg-primary2/20">
-                    <div className="max-container padding-container w-full h-full">
-                        <div className=" flex flex-col lg:flex-row gap-5 md:gap-8 lg:gap-10">
-                            <div className=" relative flex flex-col flex-1 items-center justify-center overflow-hidden rounded-lg w-full h-auto lg:min-w-[400px]">
-                                {/* <div className=" w-full max-w-[350px] h-[70%] absolute top-0 right-0 rounded-lg overflow-hidden">
-                                    <img src="/images/persons/conference_photo.jpg" alt="conference" className=" h-full object-cover w-full object-center" />
-                                </div> */}
-                                <div className=" w-full rounded-xl overflow-hidden">
-                                    <img src="/images/persons/research.jpg" alt="conference" className=" h-full object-cover w-full object-center" />
-                                </div>
-                            </div>
-                            <div className=" flex flex-col flex-1 justify-center ">
-                                <h4 className=" font-bold text-center text-xl md:text-2xl lg:text-3xl tracking-wide text-primary">
-                                    Research and Conservation
-                                </h4>
-                                <p className=" text-justify text-sm md:text-base mt-5 indent-16">
-                                    Today, half of the forests have been lost due to deforestation, agriculture, forest industry and urbanization in the world and its continues to lose 15million hectares of forests each year (Hermosilla A.C. 2000). We highly believe and consider eco-friendly tourism in Sri Lanka as well as in the world. It spurs global education and encourages awareness of the issues of habitat degradation and biodiversity loss. For that, we also conduct biodiversity conservation and research projects in Sri Lanka. In addition we published peer reviews in local and international journals of <a href="https://www.researchgate.net/profile/Indika-Peabotuwage" target="_blank" rel="noopener noreferrer" className=" text-primary3 hover:underline">our research findings.</a> As well as we do animal rescue programs when it's needed in the country and give the priority to save wild animals in different situations. We addressed school students and public audiences to how important biodiversity conservation is at the moment on a global scale. Furthermore, we are contributing our knowledge and data with government and non-government organizations for their activities (Ex: National Red List) in conservation. We provide clay bottles for clients to bring a message and reduce plastic usage. At the end, we bring our conservation message to our clients during their tours and let them understand how important biodiversity conservation and eco-friendly tourism is on the planet.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
 
             <section className="w-full overflow-hidden">
                 <div className=" w-full  bg-tour bg-cover bg-center">
@@ -308,6 +285,31 @@ const Home = () => {
                             >
                                 Migration is one of the most fascinating phenomena in nature, demonstrated by every major animal taxon, which maximizes survival and reproductive success through the utilization of key habitats, food sources and breeding grounds and the avoidance of adverse environmental conditions. Recent evidence is that every four billion migratory birds make short or long-distance migrations. Many species and large numbers of birds are annually moved to tropics along the East Asian flyway and the Central Asian flyway. Sri Lanka is one of the great destinations of migratory birds. There are three major migration routes to Sri Lanka.  Western route, Eastern route and Andaman route. They are moving along the Central Asian flyway to Sri Lanka and start their southward journey in mid-August and their departures begin in late march.
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className=" w-full h-auto overflow-hidden">
+                <div className=" w-full h-auto py-24 bg-primary2/20">
+                    <div className="max-container padding-container w-full h-full">
+                        <div className=" flex flex-col lg:flex-row gap-5 md:gap-8 lg:gap-10">
+                            <div className=" relative flex flex-col flex-1 items-center justify-center overflow-hidden rounded-lg w-full h-auto lg:min-w-[400px]">
+                                {/* <div className=" w-full max-w-[350px] h-[70%] absolute top-0 right-0 rounded-lg overflow-hidden">
+                                    <img src="/images/persons/conference_photo.jpg" alt="conference" className=" h-full object-cover w-full object-center" />
+                                </div> */}
+                                <div className=" w-full rounded-xl overflow-hidden">
+                                    <img src="/images/persons/research.jpg" alt="conference" className=" h-full object-cover w-full object-center" />
+                                </div>
+                            </div>
+                            <div className=" flex flex-col flex-1 justify-center ">
+                                <h4 className=" font-bold text-center text-xl md:text-2xl lg:text-3xl tracking-wide text-primary">
+                                    Research and Conservation
+                                </h4>
+                                <p className=" text-justify text-sm md:text-base mt-5 indent-16">
+                                    Today, half of the forests have been lost due to deforestation, agriculture, forest industry and urbanization in the world and its continues to lose 15million hectares of forests each year (Hermosilla A.C. 2000). We highly believe and consider eco-friendly tourism in Sri Lanka as well as in the world. It spurs global education and encourages awareness of the issues of habitat degradation and biodiversity loss. For that, we also conduct biodiversity conservation and research projects in Sri Lanka. In addition we published peer reviews in local and international journals of <a href="https://www.researchgate.net/profile/Indika-Peabotuwage" target="_blank" rel="noopener noreferrer" className=" text-primary3 hover:underline">our research findings.</a> As well as we do animal rescue programs when it's needed in the country and give the priority to save wild animals in different situations. We addressed school students and public audiences to how important biodiversity conservation is at the moment on a global scale. Furthermore, we are contributing our knowledge and data with government and non-government organizations for their activities (Ex: National Red List) in conservation. We provide clay bottles for clients to bring a message and reduce plastic usage. At the end, we bring our conservation message to our clients during their tours and let them understand how important biodiversity conservation and eco-friendly tourism is on the planet.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -497,6 +499,8 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            
 
             <section className="w-full overflow-hidden bg-white">
                 <div className=" w-full   bg-cover bg-center  py-24">

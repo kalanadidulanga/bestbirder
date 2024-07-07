@@ -126,7 +126,7 @@ const Reviews = () => {
                     <TableCell>{review.review}</TableCell>
                     <TableCell className="text-center">{review.stars}</TableCell>
                     <TableCell className={`text-nowrap ${review.status == 0 && 'text-destructive' || review.status == 1 && 'text-primary' || review.status >= 2 && 'text-green-500'}`}>{review.status == 0 && 'Rejected or Deleted' || review.status == 1 && 'Pending' || review.status >= 2 && 'Approved'}</TableCell>
-                    <TableCell className="text-nowrap">2024-03-24</TableCell>
+                    <TableCell className="text-nowrap">{review.date}</TableCell>
                     <TableCell className="text-right justify-end flex gap-2 flex-nowrap">
 
                       {(review.status == 1 || review.status == 0) && (
