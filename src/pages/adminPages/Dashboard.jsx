@@ -8,11 +8,11 @@ import { Link } from 'react-router-dom';
 const Dashboard = () => {
     
     return (
-        <>
-            <div>
-                dashboard
+        <div className=' w-full h-full overflow-hidden'>
+            <div className=' max-container padding-container py-8'>
+                <h4 className=' text-2xl font-bold'>BestBirder dashboard</h4>
             </div>
-        </>
+        </div>
     )
 }
 

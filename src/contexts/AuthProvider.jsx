@@ -41,14 +41,20 @@ const AuthProvider = ({ children }) => {
                         //     navigate('/');
                         // }
                     } else {
-                        toast.error(response.data.message || 'Authentication failed');
+                        // toast.error(response.data.message || 'Authentication failed');
                         console.log(response.data.message);
                         // handle error
-                        logout();
+                        setUser(null);
+                        Cookies.remove('auth_token');
+                        Cookies.remove('user_id');
+                        localStorage.clear();
                     }
                 } catch (error) {
                     console.error('There was an error!', error);
-                    logout();
+                    setUser(null);
+                    Cookies.remove('auth_token');
+                    Cookies.remove('user_id');
+                    localStorage.clear();
                 }
             };
 

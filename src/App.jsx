@@ -48,7 +48,6 @@ function App() {
         </Route>
 
         <Route path="/login" element={<Login />} />
-
         <Route path="/admin" element={<AdminLayout />}>
           <Route element={<ProtectedRoute />}>
             <Route index element={<Dashboard />} />

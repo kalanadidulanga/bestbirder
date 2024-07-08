@@ -95,13 +95,13 @@ const AllReviews = () => {
                     </div>
 
                     <div className=" flex justify-center mt-5">
-                            <PaginationSection
-                                totalPosts={dataSet.length}
-                                postsPerPage={postsPerPage}
-                                currentPage={currentPage}
-                                setCurrentPage={setCurrentPage}
-                            />
-                        </div>
+                        <PaginationSection
+                            totalPosts={dataSet.length}
+                            postsPerPage={postsPerPage}
+                            currentPage={currentPage}
+                            setCurrentPage={setCurrentPage}
+                        />
+                    </div>
 
                 </div>
             </div>

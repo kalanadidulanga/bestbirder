@@ -82,6 +82,8 @@ const Home = () => {
     const [isLoading2, setIsLoading2] = useState(false);
     const [dataSet, setDataSet] = useState([]);
 
+    const [gal,setGal] = useState([]);
+
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(6);
     const lastPostIndex = currentPage * postsPerPage;
@@ -105,7 +107,26 @@ const Home = () => {
             }
         }
 
+        const loadGal = async () => {
+            setIsLoading(true);
+            try {
+                const response = await axios.get(`${BACKEND_URL}/get-gallery-admin.php`);
+                if (response.data.success) {
+                    let data = response.data.data.slice(0,10);
+                    setGal(data);
+                } else {
+                    toast.error(response.data.message || 'Error fetching reviews');
+                }
+            } catch (error) {
+                toast.error('Error fetching reviews:', error);
+            } finally {
+                setIsLoading(false);
+            }
+        }
+
+
         loadReviews()
+        loadGal()
     }, [key])
 
     const handleReviewSubmtion = async () => {
@@ -210,7 +231,7 @@ const Home = () => {
                 </div>
             </section>
 
-            
+
 
             <section className="w-full overflow-hidden">
                 <div className=" w-full  bg-tour bg-cover bg-center">
@@ -276,7 +297,7 @@ const Home = () => {
                             </h1>
 
                             <div className=" w-full max-w-[800px] max-h-[400px] h-auto rounded-lg overflow-hidden shadow-lg flex justify-center items-end">
-                                <img src="/images/locations/birdmigration.jpg" alt=""  className="w-full h-full object-cover"/>
+                                <img src="/images/locations/birdmigration.jpg" alt="" className="w-full h-full object-cover" />
                             </div>
 
                             <p
@@ -307,7 +328,7 @@ const Home = () => {
                                     Research and Conservation
                                 </h4>
                                 <p className=" text-justify text-sm md:text-base mt-5 indent-16">
-                                    Today, half of the forests have been lost due to deforestation, agriculture, forest industry and urbanization in the world and its continues to lose 15million hectares of forests each year (Hermosilla A.C. 2000). We highly believe and consider eco-friendly tourism in Sri Lanka as well as in the world. It spurs global education and encourages awareness of the issues of habitat degradation and biodiversity loss. For that, we also conduct biodiversity conservation and research projects in Sri Lanka. In addition we published peer reviews in local and international journals of <a href="https://www.researchgate.net/profile/Indika-Peabotuwage" target="_blank" rel="noopener noreferrer" className=" text-primary3 hover:underline">our research findings.</a> As well as we do animal rescue programs when it's needed in the country and give the priority to save wild animals in different situations. We addressed school students and public audiences to how important biodiversity conservation is at the moment on a global scale. Furthermore, we are contributing our knowledge and data with government and non-government organizations for their activities (Ex: National Red List) in conservation. We provide clay bottles for clients to bring a message and reduce plastic usage. At the end, we bring our conservation message to our clients during their tours and let them understand how important biodiversity conservation and eco-friendly tourism is on the planet.
+                                    Today, half of the forests have been lost due to deforestation, agriculture, forest industry and urbanization in the world and its continues to lose 15million hectares of forests each year (Hermosilla A.C. 2000). We highly believe and consider eco-friendly tourism in Sri Lanka as well as in the world. It spurs global education and encourages awareness of the issues of habitat degradation and biodiversity loss. For that, we also conduct biodiversity conservation and research projects in Sri Lanka. In addition we published peer reviews in local and international journals of <a href="https://www.researchgate.net/profile/Indika-Peabotuwage" target="_blank" rel="noopener noreferrer" className=" text-primary3 hover:underline">our research findings.</a> As well as we do animal rescue programs when it's needed in the country and give the priority to save wild animals in different situations. We address school students and public audiences to how important biodiversity conservation is at the moment on a global scale. Furthermore, we are contributing our knowledge and data with government and non-government organizations for their activities (Ex: National Red List) in conservation. We provide clay bottles for clients to bring a message and reduce plastic usage. At the end, we bring our conservation message to our clients during their tours and let them understand how important biodiversity conservation and eco-friendly tourism is on the planet.
                                 </p>
                             </div>
                         </div>
@@ -333,7 +354,7 @@ const Home = () => {
                             Best Travel Agency in Sri Lanka
                         </h2>
                         <p className=" regular-16 md:regular-18 lg:regular-20 text-black/80">
-                            Best Birder is a group of wildlife researchers and bird experts in
+                            Best Birder is a group of wildlife researchers and bird expertise in
                             Sri Lanka with over 15 years of experience. We wish to give an
                             ultimate wildlife and birding experience for anyone who loves to
                             enjoy the unique and wondrous Wildlife in Sri Lanka.
@@ -500,7 +521,7 @@ const Home = () => {
                 </div>
             </section>
 
-            
+
 
             <section className="w-full overflow-hidden bg-white">
                 <div className=" w-full   bg-cover bg-center  py-24">
@@ -517,11 +538,11 @@ const Home = () => {
                                 speed={500}
                                 plugins={[lgThumbnail, lgZoom]}
                             >
-                                {IMAGE_GAL.map((src, index) => (
-                                    <a href={src.src} key={index}>
+                                {gal?.map((src, index) => (
+                                    <a href={src.img_url} key={index}>
                                         <img
-                                            alt={src.alt}
-                                            src={src.src}
+                                            alt={src.title}
+                                            src={src.img_url}
                                             className=" hover:brightness-75"
                                         />
                                     </a>

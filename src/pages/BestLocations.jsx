@@ -65,7 +65,7 @@ const BestLocations = () => {
                   </div>
                   <p className=" indent-10 max-w-5xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                     Wilpattu is the largest National Park in Sri Lanka. World
-                    renowned for its leopard (Panthera pardus kotiya) population,
+                    renowned for its leopard (<i>Panthera pardus kotiya</i>) population,
                     the unique feature of this park is the existence of “Willus”
                     (natural, sand-rimmed water basin or depressions that fill
                     with rainwater). Located in northwest coastal lowland dry zone
