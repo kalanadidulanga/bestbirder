@@ -14,7 +14,7 @@ const Policy = () => {
     <>
       {/* <Navbar /> */}
 
-      <PageHeader name="Contact Us" image={"/images/others/4.jpg"} className={" object-center"}/>
+      <PageHeader name="Policy" image={"/images/others/4.jpg"} className={" object-center"}/>
 
       <section className=' w-full h-auto overflow-hidden'>
         <div className='bg-image5 bg-cover bg-bottom w-full'>

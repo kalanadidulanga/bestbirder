@@ -82,7 +82,7 @@ const Home = () => {
     const [isLoading2, setIsLoading2] = useState(false);
     const [dataSet, setDataSet] = useState([]);
 
-    const [gal,setGal] = useState([]);
+    const [gal, setGal] = useState([]);
 
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(6);
@@ -112,7 +112,7 @@ const Home = () => {
             try {
                 const response = await axios.get(`${BACKEND_URL}/get-gallery-admin.php`);
                 if (response.data.success) {
-                    let data = response.data.data.slice(0,10);
+                    let data = response.data.data.slice(0, 10);
                     setGal(data);
                 } else {
                     toast.error(response.data.message || 'Error fetching reviews');
@@ -606,6 +606,40 @@ const Home = () => {
                                 from the 16th century. And also, Sri Lanka is rich with Amphibians, Mammals,
                                 Reptiles, Butterflies, Freshwater Fish and Tropical Flora with
                                 many endemics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="w-full flexCenter overflow-hidden">
+                <div className=" bg-background w-full h-full">
+                    <div className="max-container padding-container h-full py-24">
+                        <div className=" flex flex-col gap-2 lg:gap-4 items-center">
+                            <h1
+                                className="bold-32 lg:bold-40 mb-3 lg:mb-7 text-primary text-center"
+                            // style={{ textShadow: "0px 0px 5px blue" }}
+                            >
+                                Wildlife arts and scientific illustrations
+                            </h1>
+
+                            <div className=" mt-5 w-full h-auto flex flex-row relative">
+                                <div className=" flex flex-1 w-full h-auto items-center justify-center shadow-md rounded-lg -rotate-12">
+                                    <img src="/images/illustrations/C.dubium.jpg" alt="C.dubium.jpg" className=" object-cover"/>
+                                </div>
+                                <div className=" flex flex-1 w-full h-auto items-center justify-center rounded-lg">
+                                    <img src="/images/illustrations/photo _page-0001.jpg" alt="photo _page-0001.jpg" className=" object-cover"/>
+                                </div>
+                                <div className=" flex flex-1 w-full h-auto items-center justify-center shadow-md rounded-lg rotate-12">
+                                    <img src="/images/illustrations/scan 2.jpg" alt="scan 2.jpg" className=" object-cover"/>
+                                </div>
+                            </div>
+
+                            <p
+                                className=" mt-5 regular-14 lg:regular-18 text-foreground max-w-5xl tracking-wide leading-relaxed text-justify indent-8 lg:indent-20"
+                            // style={{ textShadow: "0px 0px 5px black" }}
+                            >
+                                Indika is a distinguished wildlife artist and scientific illustrator in Sri Lanka, renowned for his exceptional talent in capturing the intricacies of nature. With over 15 years of experience, he has mastered the art of wildlife, botanical, and zoological illustration. His work has significantly contributed to numerous biological research projects, showcasing his expertise and dedication to the field. Indika continues to make a substantial impact as both a wildlife artist and a scientific illustrator, enriching Sri Lanka's scientific and artistic communities with his skill and passion.
                             </p>
                         </div>
                     </div>
