@@ -1,7 +1,7 @@
 // NAVIGATION
 // export const BACKEND_URL = 'http://localhost:80/bestbirdersl_server';
-// export const BACKEND_URL = 'https://bestbirdersl.com/bestbirdersl_server';
-export const BACKEND_URL = "https://api.bestbirdersl.com";
+export const BACKEND_URL = "https://bestbirdersl.com/bestbirdersl_server";
+// export const BACKEND_URL = "https://api.bestbirdersl.com";
 
 export const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
