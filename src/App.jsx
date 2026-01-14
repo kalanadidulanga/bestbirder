@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar"
 import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home"
+import { useEffect } from "react";
 import {
   BrowserRouter,
   Route,
@@ -30,6 +31,19 @@ import Profile from "./pages/adminPages/Profile";
 function App() {
 
   const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ block: "start" });
+        return;
+      }
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location.pathname, location.hash]);
 
   return (
     <>
