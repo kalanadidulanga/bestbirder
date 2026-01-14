@@ -173,59 +173,73 @@ const Home = () => {
             <GoToTop />
             {/* <Navbar /> */}
 
-            <section className=" w-full lg:h-[40vw] md:h-[50vw] h-[60vw] flexCenter overflow-hidden">
+            <section className="relative w-full lg:h-[45vw] md:h-[55vw] h-[70vw] min-h-[500px] flexCenter overflow-hidden">
                 <Carousel
                     plugins={[plugin.current]}
                     className="w-full h-full"
-                // onMouseEnter={plugin.current.stop}
-                // onMouseLeave={plugin.current.reset}
                 >
                     <CarouselContent className="">
                         {HOME_CAROUSEL.map((link) => (
                             <CarouselItem key={link.src} className="">
                                 <div
-                                    className=" w-full lg:h-[40vw] md:h-[50vw] h-[60vw] flex items-center justify-center overflow-hidden bg-no-repeat bg-top bg-cover brightness-90"
+                                    className="w-full lg:h-[45vw] md:h-[55vw] h-[70vw] min-h-[500px] flex items-center justify-center overflow-hidden bg-no-repeat bg-top bg-cover"
                                     style={{
                                         backgroundImage: `url(${link.src})`,
                                     }}
-                                >
-                                    {/* <img src={link.src} alt="homeimg" className=" object-cover w-full h-full"/> */}
-                                </div>
+                                />
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious className=" invisible lg:visible" />
-                    <CarouselNext className=" invisible lg:visible" />
+                    <CarouselPrevious className="invisible lg:visible left-4 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/40" />
+                    <CarouselNext className="invisible lg:visible right-4 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/40" />
                 </Carousel>
 
-                <div className=" absolute z-30 w-full lg:h-[40vw] md:h-[50vw] h-[60vw] overflow-hidden bg-black/30">
-                    <div className="flex justify-start items-end w-full h-full max-container padding-container">
-                        <div className=" flex justify-center flex-col max-w-[800px] py-5">
-                            <h3
-                                className=" text-white bold-20 md:bold-40 lg:bold-64 tracking-normal "
-                                style={{ textShadow: "0px 0px 10px white" }}
-                            >
-                                Travel With
-                            </h3>
-                            <h1
-                                className=" text-white bold-40 md:bold-64 lg:bold-88 tracking-widest uppercase md:mb-10"
-                                style={{ textShadow: "0px 0px 10px white" }}
-                            >
-                                BestBirder
-                            </h1>
-                            {/* <p
-                                className=" text-white bold-14 md:bold-18 lg:bold-20 leading-loose pt-3 md:pt-4 lg:pt-5"
-                                style={{ textShadow: "0px 0px 10px white" }}
-                            >
-                                best birder is a government registered company
-                            </p> */}
-                            {/* <p className=" text-white regular-14 md:regular-18 lg:regular-20 leading-loose pt-5" style={{ textShadow: '0px 0px 10px white' }}>
-                                Your gateway to Sri Lanka's avian wonders. 15+ years of expertise, crafting ultimate wildlife & birding adventures for nature lovers. <span>best birder is a government registered company</span>
-                            </p> */}
-                            {/* <p className=" text-white regular-14 lg:regular-20 leading-normal inline-flex md:hidden pt-5" style={{ textShadow: '0px 0px 10px white' }}>
-                                Your gateway to Sri Lanka's avian wonders. 15+ years of expertise, crafting ultimate wildlife & birding adventures for nature lovers.
-                            </p> */}
-                            {/* <Button variant="default" className="mt-5 max-w-52 md:mb-10" onClick={() => { navigate('/about_us') }}>About us</Button> */}
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
+
+                {/* Content Overlay */}
+                <div className="absolute inset-0 z-20 flex items-center justify-center">
+                    <div className="max-container padding-container w-full h-full flex items-center justify-center lg:justify-start">
+                        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-[900px] space-y-4 md:space-y-6 lg:space-y-8 px-4">
+                            {/* Subtitle */}
+                            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-primary3/20 backdrop-blur-md border border-primary3/30">
+                                <div className="w-2 h-2 rounded-full bg-primary3 animate-pulse" />
+                                <p className="text-white text-sm md:text-base lg:text-lg font-medium tracking-wider uppercase">
+                                    Bird and Wildlife Tours in Sri Lanka
+                                </p>
+                            </div>
+
+                            {/* Main Heading */}
+                            <div className="space-y-2 md:space-y-3">
+                                <h3 className="text-white/90 text-xl md:text-3xl lg:text-5xl font-light tracking-wide">
+                                    Travel With
+                                </h3>
+                                <h1 className="text-white text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wider uppercase bg-gradient-to-r from-white via-primary2/80 to-white bg-clip-text text-transparent drop-shadow-2xl">
+                                    BestBirder
+                                </h1>
+                            </div>
+
+                            {/* Description */}
+                            <p className="text-white/90 text-base md:text-lg lg:text-xl max-w-[700px] leading-relaxed font-light">
+                                Your gateway to Sri Lanka's avian wonders. 15+ years of expertise in crafting ultimate wildlife & birding adventures.
+                            </p>
+
+                            {/* CTA Buttons */}
+                            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                                <Button 
+                                    onClick={() => navigate('/tours')}
+                                    className="px-8 py-6 bg-primary hover:bg-primary/90 text-white rounded-lg text-base md:text-lg font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                                >
+                                    Explore Tours
+                                </Button>
+                                <Button 
+                                    onClick={() => navigate('/contact_us')}
+                                    variant="outline"
+                                    className="px-8 py-6 bg-white/10 hover:bg-white/20 text-white border-2 border-white/50 backdrop-blur-md rounded-lg text-base md:text-lg font-semibold hover:scale-105 transition-all duration-300"
+                                >
+                                    Contact Us
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>

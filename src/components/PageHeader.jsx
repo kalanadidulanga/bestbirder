@@ -9,8 +9,8 @@ const PageHeader = ({ name,image, className }) => {
             <section className=' bg-primary2/20 bg-cover bg-center '>
                 <div className=' bg-black/30 relative w-full h-auto flex flex-col overflow-hidden'>
                     <img src={image} alt="" className={` ${className} absolute z-0 w-full h-full object-cover`} />
-                    <div className=' w-full h-full bg-black/30 z-50'>
-                        <div className=' max-container padding-contaoner py-14 md:py-16 lg:py-20 overflow-hidden z-50'>
+                    <div className=' w-full h-full bg-black/30 z-20'>
+                        <div className=' max-container padding-contaoner py-14 md:py-16 lg:py-20 overflow-hidden z-20'>
                             <div className=' flex flex-col items-center justify-center gap-4'>
                                 <h2 className=' text-white text-center text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide'>{name}</h2>
                                 <div className=' flex items-center gap-3'>
