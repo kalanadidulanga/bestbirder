@@ -77,10 +77,10 @@ const AboutUs = () => {
 
               <div className=" flex flex-col flex-1 items-center">
                 <h4 className=" font-bold text-xl md:text-2xl lg:text-3xl mb-2 lg:mb-2 text-primary">
-                  Tour Operator
+                  Tour Operators
                 </h4>
                 <div className=" flex flex-col lg:flex-row gap-5 lg:gap-10 mt-5 items-center">
-                  <div className=" max-w-4xl max-h-[400px] overflow-hidden rounded-xl flex items-center justify-center my-5">
+                  <div className=" max-w-xl max-h-[400px] overflow-hidden rounded-xl flex items-center justify-center my-5">
                     <img
                       src="/images/persons/Dhammithra.jpg"
                       alt=""
@@ -93,6 +93,23 @@ const AboutUs = () => {
                     </h5>
                     <p className=" max-w-4xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
                       Dhammithra Samarasinghe is one of the talented tour operators in Sri Lanka. He has been working in Bird and Wildlife tourism field nearly 25 years in the country. He has gained knowledge of both fauna and flora in Sri Lanka and also an experienced wildlife researcher in academic and conservation level including local and international platform. Where natural history is concerned his knowledge is sound and scientific and he knows where to creep and crawl in search of the rare jewel of the client desire.
+                    </p>
+                  </div>
+                </div>
+                <div className=" flex flex-col lg:flex-row gap-5 lg:gap-10 mt-5 items-center">
+                  <div className=" max-w-xl max-h-[400px] overflow-hidden rounded-xl flex items-start justify-center my-5">
+                    <img
+                      src="/images/persons/suranan.jpg"
+                      alt=""
+                      className=" object-cover object-top rounded-xl hover:shadow-xl hover:brightness-90 transition-all duration-300"
+                    />
+                  </div>
+                  <div className=" flex flex-col">
+                    <h5 className="bold-14 md:bold-18 lg:bold-20 mb-1 lg:mb-2">
+                      Mr. Suranjan Karunarathna
+                    </h5>
+                    <p className=" max-w-4xl text-justify regular-14 md:regular-16 lg:regular-18 tracking-wide">
+                      Mr. Suranjan Karunarathna is an ecologist and herpetologist renowned for his extensive research on amphibians, reptiles, and biodiversity conservation. He has worked with both government and non-government organizations on research and conservation initiatives in Sri Lanka, leading to numerous scientific publications and community-based conservation efforts. He is also the founder of the Nature Exploration and Education Team in Sri Lanka. Beyond research, Suranjan is a licensed National Tourist Guide in Sri Lanka, uniquely bridging science with eco-tourism. With decades of experience as a herping guide, he combines strong scientific expertise with hands-on field guiding across Sri Lanka.
                     </p>
                   </div>
                 </div>
